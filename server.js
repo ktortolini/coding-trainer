@@ -24,7 +24,7 @@ app.get('/trainer', function (req, res) {
 });
 
 // get route for api
-app.get('/api/notes', function (req, res) {
+app.get('/api/code', function (req, res) {
 	res.sendFile(path.join(__dirname, './db/code.json'));
 });
 
