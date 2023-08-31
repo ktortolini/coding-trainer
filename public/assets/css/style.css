@@ -1,0 +1,20 @@
+/* imports the keyboard styling */
+@import './keyboard.css';
+/* imports a custom framework made in a previous project from jsDelivr */
+@import url(https://cdn.jsdelivr.net/gh/ktortolini/stu-side-project-01@main/assets/css/bitkit.min.css);
+
+/* todo: add to bitkit */
+.position {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-65%, -50%);
+}
+
+/* todo: add to bitkit */
+.keyboard-grid {
+	display: grid;
+	grid-gap: 0px;
+	grid-template-rows: repeat(5, 16px); /* 5 rows, height of 16px */
+	grid-template-columns: repeat(30, 8px); /* 30 columns, width of 8px */
+}
