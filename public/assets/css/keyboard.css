@@ -1,0 +1,1372 @@
+/* animation for key-down */
+/* important: all animations */
+@keyframes a-key-animation {
+	0% {
+		content: var(--a-full-key);
+	}
+	50% {
+		content: var(--a-half-key);
+	}
+	100% {
+		content: var(--a-empty-key);
+	}
+}
+@keyframes b-key-animation {
+	0% {
+		content: var(--b-full-key);
+	}
+	50% {
+		content: var(--b-half-key);
+	}
+	100% {
+		content: var(--b-empty-key);
+	}
+}
+@keyframes c-key-animation {
+	0% {
+		content: var(--c-full-key);
+	}
+	50% {
+		content: var(--c-half-key);
+	}
+	100% {
+		content: var(--c-empty-key);
+	}
+}
+@keyframes d-key-animation {
+	0% {
+		content: var(--d-full-key);
+	}
+	50% {
+		content: var(--d-half-key);
+	}
+	100% {
+		content: var(--d-empty-key);
+	}
+}
+@keyframes e-key-animation {
+	0% {
+		content: var(--e-full-key);
+	}
+	50% {
+		content: var(--e-half-key);
+	}
+	100% {
+		content: var(--e-empty-key);
+	}
+}
+@keyframes f-key-animation {
+	0% {
+		content: var(--f-full-key);
+	}
+	50% {
+		content: var(--f-half-key);
+	}
+	100% {
+		content: var(--f-empty-key);
+	}
+}
+@keyframes g-key-animation {
+	0% {
+		content: var(--g-full-key);
+	}
+	50% {
+		content: var(--g-half-key);
+	}
+	100% {
+		content: var(--g-empty-key);
+	}
+}
+@keyframes h-key-animation {
+	0% {
+		content: var(--h-full-key);
+	}
+	50% {
+		content: var(--h-half-key);
+	}
+	100% {
+		content: var(--h-empty-key);
+	}
+}
+@keyframes i-key-animation {
+	0% {
+		content: var(--i-full-key);
+	}
+	50% {
+		content: var(--i-half-key);
+	}
+	100% {
+		content: var(--i-empty-key);
+	}
+}
+@keyframes j-key-animation {
+	0% {
+		content: var(--j-full-key);
+	}
+	50% {
+		content: var(--j-half-key);
+	}
+	100% {
+		content: var(--j-empty-key);
+	}
+}
+@keyframes k-key-animation {
+	0% {
+		content: var(--k-full-key);
+	}
+	50% {
+		content: var(--k-half-key);
+	}
+	100% {
+		content: var(--k-empty-key);
+	}
+}
+@keyframes l-key-animation {
+	0% {
+		content: var(--l-full-key);
+	}
+	50% {
+		content: var(--l-half-key);
+	}
+	100% {
+		content: var(--l-empty-key);
+	}
+}
+@keyframes m-key-animation {
+	0% {
+		content: var(--m-full-key);
+	}
+	50% {
+		content: var(--m-half-key);
+	}
+	100% {
+		content: var(--m-empty-key);
+	}
+}
+@keyframes n-key-animation {
+	0% {
+		content: var(--n-full-key);
+	}
+	50% {
+		content: var(--n-half-key);
+	}
+	100% {
+		content: var(--n-empty-key);
+	}
+}
+@keyframes o-key-animation {
+	0% {
+		content: var(--o-full-key);
+	}
+	50% {
+		content: var(--o-half-key);
+	}
+	100% {
+		content: var(--o-empty-key);
+	}
+}
+@keyframes p-key-animation {
+	0% {
+		content: var(--p-full-key);
+	}
+	50% {
+		content: var(--p-half-key);
+	}
+	100% {
+		content: var(--p-empty-key);
+	}
+}
+@keyframes q-key-animation {
+	0% {
+		content: var(--q-full-key);
+	}
+	50% {
+		content: var(--q-half-key);
+	}
+	100% {
+		content: var(--q-empty-key);
+	}
+}
+@keyframes r-key-animation {
+	0% {
+		content: var(--r-full-key);
+	}
+	50% {
+		content: var(--r-half-key);
+	}
+	100% {
+		content: var(--r-empty-key);
+	}
+}
+@keyframes s-key-animation {
+	0% {
+		content: var(--s-full-key);
+	}
+	50% {
+		content: var(--s-half-key);
+	}
+	100% {
+		content: var(--s-empty-key);
+	}
+}
+@keyframes t-key-animation {
+	0% {
+		content: var(--t-full-key);
+	}
+	50% {
+		content: var(--t-half-key);
+	}
+	100% {
+		content: var(--t-empty-key);
+	}
+}
+@keyframes u-key-animation {
+	0% {
+		content: var(--u-full-key);
+	}
+	50% {
+		content: var(--u-half-key);
+	}
+	100% {
+		content: var(--u-empty-key);
+	}
+}
+@keyframes v-key-animation {
+	0% {
+		content: var(--v-full-key);
+	}
+	50% {
+		content: var(--v-half-key);
+	}
+	100% {
+		content: var(--v-empty-key);
+	}
+}
+@keyframes w-key-animation {
+	0% {
+		content: var(--w-full-key);
+	}
+	50% {
+		content: var(--w-half-key);
+	}
+	100% {
+		content: var(--w-empty-key);
+	}
+}
+@keyframes x-key-animation {
+	0% {
+		content: var(--x-full-key);
+	}
+	50% {
+		content: var(--x-half-key);
+	}
+	100% {
+		content: var(--x-empty-key);
+	}
+}
+@keyframes y-key-animation {
+	0% {
+		content: var(--y-full-key);
+	}
+	50% {
+		content: var(--y-half-key);
+	}
+	100% {
+		content: var(--y-empty-key);
+	}
+}
+@keyframes z-key-animation {
+	0% {
+		content: var(--z-full-key);
+	}
+	50% {
+		content: var(--z-half-key);
+	}
+	100% {
+		content: var(--z-empty-key);
+	}
+}
+@keyframes dot-key-animation {
+	0% {
+		content: var(--dot-full-key);
+	}
+	50% {
+		content: var(--dot-half-key);
+	}
+	100% {
+		content: var(--dot-empty-key);
+	}
+}
+@keyframes one-key-animation {
+	0% {
+		content: var(--one-full-key);
+	}
+	50% {
+		content: var(--one-half-key);
+	}
+	100% {
+		content: var(--one-empty-key);
+	}
+}
+@keyframes two-key-animation {
+	0% {
+		content: var(--two-full-key);
+	}
+	50% {
+		content: var(--two-half-key);
+	}
+	100% {
+		content: var(--two-empty-key);
+	}
+}
+@keyframes six-key-animation {
+	0% {
+		content: var(--six-full-key);
+	}
+	50% {
+		content: var(--six-half-key);
+	}
+	100% {
+		content: var(--six-empty-key);
+	}
+}
+@keyframes alt-key-animation {
+	0% {
+		content: var(--alt-full-key);
+	}
+	50% {
+		content: var(--alt-half-key);
+	}
+	100% {
+		content: var(--alt-empty-key);
+	}
+}
+@keyframes tab-key-animation {
+	0% {
+		content: var(--tab-full-key);
+	}
+	50% {
+		content: var(--tab-half-key);
+	}
+	100% {
+		content: var(--tab-empty-key);
+	}
+}
+@keyframes plus-key-animation {
+	0% {
+		content: var(--plus-full-key);
+	}
+	50% {
+		content: var(--plus-half-key);
+	}
+	100% {
+		content: var(--plus-empty-key);
+	}
+}
+@keyframes zero-key-animation {
+	0% {
+		content: var(--zero-full-key);
+	}
+	50% {
+		content: var(--zero-half-key);
+	}
+	100% {
+		content: var(--zero-empty-key);
+	}
+}
+@keyframes four-key-animation {
+	0% {
+		content: var(--four-full-key);
+	}
+	50% {
+		content: var(--four-half-key);
+	}
+	100% {
+		content: var(--four-empty-key);
+	}
+}
+@keyframes five-key-animation {
+	0% {
+		content: var(--five-full-key);
+	}
+	50% {
+		content: var(--five-half-key);
+	}
+	100% {
+		content: var(--five-empty-key);
+	}
+}
+@keyframes nine-key-animation {
+	0% {
+		content: var(--nine-full-key);
+	}
+	50% {
+		content: var(--nine-half-key);
+	}
+	100% {
+		content: var(--nine-empty-key);
+	}
+}
+@keyframes quote-key-animation {
+	0% {
+		content: var(--quote-full-key);
+	}
+	50% {
+		content: var(--quote-half-key);
+	}
+	100% {
+		content: var(--quote-empty-key);
+	}
+}
+@keyframes minus-key-animation {
+	0% {
+		content: var(--minus-full-key);
+	}
+	50% {
+		content: var(--minus-half-key);
+	}
+	100% {
+		content: var(--minus-empty-key);
+	}
+}
+@keyframes comma-key-animation {
+	0% {
+		content: var(--comma-full-key);
+	}
+	50% {
+		content: var(--comma-half-key);
+	}
+	100% {
+		content: var(--comma-empty-key);
+	}
+}
+@keyframes tilde-key-animation {
+	0% {
+		content: var(--tilde-full-key);
+	}
+	50% {
+		content: var(--tilde-half-key);
+	}
+	100% {
+		content: var(--tilde-empty-key);
+	}
+}
+@keyframes three-key-animation {
+	0% {
+		content: var(--three-full-key);
+	}
+	50% {
+		content: var(--three-half-key);
+	}
+	100% {
+		content: var(--three-empty-key);
+	}
+}
+@keyframes seven-key-animation {
+	0% {
+		content: var(--seven-full-key);
+	}
+	50% {
+		content: var(--seven-half-key);
+	}
+	100% {
+		content: var(--seven-empty-key);
+	}
+}
+@keyframes eight-key-animation {
+	0% {
+		content: var(--eight-full-key);
+	}
+	50% {
+		content: var(--eight-half-key);
+	}
+	100% {
+		content: var(--eight-empty-key);
+	}
+}
+@keyframes slash-key-animation {
+	0% {
+		content: var(--slash-full-key);
+	}
+	50% {
+		content: var(--slash-half-key);
+	}
+	100% {
+		content: var(--slash-empty-key);
+	}
+}
+@keyframes enter-key-animation {
+	0% {
+		content: var(--enter-full-key);
+	}
+	50% {
+		content: var(--enter-half-key);
+	}
+	100% {
+		content: var(--enter-empty-key);
+	}
+}
+@keyframes space-key-animation {
+	0% {
+		content: var(--space-full-key);
+	}
+	50% {
+		content: var(--space-half-key);
+	}
+	100% {
+		content: var(--space-empty-key);
+	}
+}
+@keyframes command-key-animation {
+	0% {
+		content: var(--command-full-key);
+	}
+	50% {
+		content: var(--command-half-key);
+	}
+	100% {
+		content: var(--command-empty-key);
+	}
+}
+@keyframes control-key-animation {
+	0% {
+		content: var(--control-full-key);
+	}
+	50% {
+		content: var(--control-half-key);
+	}
+	100% {
+		content: var(--control-empty-key);
+	}
+}
+@keyframes function-key-animation {
+	0% {
+		content: var(--function-full-key);
+	}
+	50% {
+		content: var(--function-half-key);
+	}
+	100% {
+		content: var(--function-empty-key);
+	}
+}
+@keyframes semicolon-key-animation {
+	0% {
+		content: var(--semicolon-full-key);
+	}
+	50% {
+		content: var(--semicolon-half-key);
+	}
+	100% {
+		content: var(--semicolon-empty-key);
+	}
+}
+@keyframes backslash-key-animation {
+	0% {
+		content: var(--backslash-full-key);
+	}
+	50% {
+		content: var(--backslash-half-key);
+	}
+	100% {
+		content: var(--backslash-empty-key);
+	}
+}
+@keyframes backspace-key-animation {
+	0% {
+		content: var(--backspace-full-key);
+	}
+	50% {
+		content: var(--backspace-half-key);
+	}
+	100% {
+		content: var(--backspace-empty-key);
+	}
+}
+@keyframes caps-lock-key-animation {
+	0% {
+		content: var(--caps-lock-full-key);
+	}
+	50% {
+		content: var(--caps-lock-half-key);
+	}
+	100% {
+		content: var(--caps-lock-empty-key);
+	}
+}
+@keyframes shift-left-key-animation {
+	0% {
+		content: var(--shift-left-full-key);
+	}
+	50% {
+		content: var(--shift-left-half-key);
+	}
+	100% {
+		content: var(--shift-left-empty-key);
+	}
+}
+@keyframes shift-right-key-animation {
+	0% {
+		content: var(--shift-right-full-key);
+	}
+	50% {
+		content: var(--shift-right-half-key);
+	}
+	100% {
+		content: var(--shift-right-empty-key);
+	}
+}
+@keyframes open-bracket-key-animation {
+	0% {
+		content: var(--open-bracket-full-key);
+	}
+	50% {
+		content: var(--open-bracket-half-key);
+	}
+	100% {
+		content: var(--open-bracket-empty-key);
+	}
+}
+@keyframes close-bracket-key-animation {
+	0% {
+		content: var(--close-bracket-full-key);
+	}
+	50% {
+		content: var(--close-bracket-half-key);
+	}
+	100% {
+		content: var(--close-bracket-empty-key);
+	}
+}
+
+#a-key-default {
+	grid-column: span 2;
+	content: var(--a-full-key);
+}
+
+#a-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: a-key-animation 0.1s;
+}
+
+#b-key-default {
+	grid-column: span 2;
+	content: var(--b-full-key);
+}
+
+#b-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: b-key-animation 0.1s;
+}
+
+#c-key-default {
+	grid-column: span 2;
+	content: var(--c-full-key);
+}
+
+#c-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: c-key-animation 0.1s;
+}
+
+#d-key-default {
+	grid-column: span 2;
+	content: var(--d-full-key);
+}
+
+#d-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: d-key-animation 0.1s;
+}
+
+#e-key-default {
+	grid-column: span 2;
+	content: var(--e-full-key);
+}
+
+#e-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: e-key-animation 0.1s;
+}
+
+#f-key-default {
+	grid-column: span 2;
+	content: var(--f-full-key);
+}
+
+#f-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: f-key-animation 0.1s;
+}
+
+#g-key-default {
+	grid-column: span 2;
+	content: var(--g-full-key);
+}
+
+#g-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: g-key-animation 0.1s;
+}
+
+#h-key-default {
+	grid-column: span 2;
+	content: var(--h-full-key);
+}
+
+#h-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: h-key-animation 0.1s;
+}
+
+#i-key-default {
+	grid-column: span 2;
+	content: var(--i-full-key);
+}
+
+#i-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: i-key-animation 0.1s;
+}
+
+#j-key-default {
+	grid-column: span 2;
+	content: var(--j-full-key);
+}
+
+#j-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: j-key-animation 0.1s;
+}
+
+#k-key-default {
+	grid-column: span 2;
+	content: var(--k-full-key);
+}
+
+#k-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: k-key-animation 0.1s;
+}
+
+#l-key-default {
+	grid-column: span 2;
+	content: var(--l-full-key);
+}
+
+#l-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: l-key-animation 0.1s;
+}
+
+#m-key-default {
+	grid-column: span 2;
+	content: var(--m-full-key);
+}
+
+#m-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: m-key-animation 0.1s;
+}
+
+#n-key-default {
+	grid-column: span 2;
+	content: var(--n-full-key);
+}
+
+#n-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: n-key-animation 0.1s;
+}
+
+#o-key-default {
+	grid-column: span 2;
+	content: var(--o-full-key);
+}
+
+#o-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: o-key-animation 0.1s;
+}
+
+#p-key-default {
+	grid-column: span 2;
+	content: var(--p-full-key);
+}
+
+#p-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: p-key-animation 0.1s;
+}
+
+#q-key-default {
+	grid-column: span 2;
+	content: var(--q-full-key);
+}
+
+#q-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: q-key-animation 0.1s;
+}
+
+#r-key-default {
+	grid-column: span 2;
+	content: var(--r-full-key);
+}
+
+#r-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: r-key-animation 0.1s;
+}
+
+#s-key-default {
+	grid-column: span 2;
+	content: var(--s-full-key);
+}
+
+#s-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: s-key-animation 0.1s;
+}
+
+#t-key-default {
+	grid-column: span 2;
+	content: var(--t-full-key);
+}
+
+#t-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: t-key-animation 0.1s;
+}
+
+#u-key-default {
+	grid-column: span 2;
+	content: var(--u-full-key);
+}
+
+#u-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: u-key-animation 0.1s;
+}
+
+#v-key-default {
+	grid-column: span 2;
+	content: var(--v-full-key);
+}
+
+#v-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: v-key-animation 0.1s;
+}
+
+#w-key-default {
+	grid-column: span 2;
+	content: var(--w-full-key);
+}
+
+#w-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: w-key-animation 0.1s;
+}
+
+#x-key-default {
+	grid-column: span 2;
+	content: var(--x-full-key);
+}
+
+#x-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: x-key-animation 0.1s;
+}
+
+#y-key-default {
+	grid-column: span 2;
+	content: var(--y-full-key);
+}
+
+#y-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: y-key-animation 0.1s;
+}
+
+#z-key-default {
+	grid-column: span 2;
+	content: var(--z-full-key);
+}
+
+#z-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: z-key-animation 0.1s;
+}
+
+#dot-key-default {
+	grid-column: span 2;
+	content: var(--dot-full-key);
+}
+
+#dot-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: dot-key-animation 0.1s;
+}
+
+#one-key-default {
+	grid-column: span 2;
+	content: var(--one-full-key);
+}
+
+#one-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: one-key-animation 0.1s;
+}
+
+#two-key-default {
+	grid-column: span 2;
+	content: var(--two-full-key);
+}
+
+#two-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: two-key-animation 0.1s;
+}
+
+#six-key-default {
+	grid-column: span 2;
+	content: var(--six-full-key);
+}
+
+#six-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: six-key-animation 0.1s;
+}
+
+#tab-key-default {
+	grid-column: span 3;
+	content: var(--tab-full-key);
+}
+
+#tab-key-active {
+	align-self: end;
+	grid-column: span 3;
+	animation-iteration-count: 1;
+	animation: tab-key-animation 0.1s;
+}
+
+#plus-key-default {
+	grid-column: span 2;
+	content: var(--plus-full-key);
+}
+
+#plus-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: plus-key-animation 0.1s;
+}
+
+#zero-key-default {
+	grid-column: span 2;
+	content: var(--zero-full-key);
+}
+
+#zero-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: zero-key-animation 0.1s;
+}
+
+#four-key-default {
+	grid-column: span 2;
+	content: var(--four-full-key);
+}
+
+#four-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: four-key-animation 0.1s;
+}
+
+#five-key-default {
+	grid-column: span 2;
+	content: var(--five-full-key);
+}
+
+#five-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: five-key-animation 0.1s;
+}
+
+#nine-key-default {
+	grid-column: span 2;
+	content: var(--nine-full-key);
+}
+
+#nine-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: nine-key-animation 0.1s;
+}
+
+#quote-key-default {
+	grid-column: span 2;
+	content: var(--quote-full-key);
+}
+
+#quote-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: quote-key-animation 0.1s;
+}
+
+#minus-key-default {
+	grid-column: span 2;
+	content: var(--minus-full-key);
+}
+
+#minus-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: minus-key-animation 0.1s;
+}
+
+#comma-key-default {
+	grid-column: span 2;
+	content: var(--comma-full-key);
+}
+
+#comma-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: comma-key-animation 0.1s;
+}
+
+#tilde-key-default {
+	grid-column: span 2;
+	content: var(--tilde-full-key);
+}
+
+#tilde-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: tilde-key-animation 0.1s;
+}
+
+#three-key-default {
+	grid-column: span 2;
+	content: var(--three-full-key);
+}
+
+#three-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: three-key-animation 0.1s;
+}
+
+#seven-key-default {
+	grid-column: span 2;
+	content: var(--seven-full-key);
+}
+
+#seven-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: seven-key-animation 0.1s;
+}
+
+#eight-key-default {
+	grid-column: span 2;
+	content: var(--eight-full-key);
+}
+
+#eight-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: eight-key-animation 0.1s;
+}
+
+#slash-key-default {
+	grid-column: span 2;
+	content: var(--slash-full-key);
+}
+
+#slash-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: slash-key-animation 0.1s;
+}
+
+#enter-key-default {
+	grid-column: span 4;
+	content: var(--enter-full-key);
+}
+
+#enter-key-active {
+	align-self: end;
+	grid-column: span 4;
+	animation-iteration-count: 1;
+	animation: enter-key-animation 0.1s;
+}
+
+#space-key-default {
+	grid-column: span 9;
+	content: var(--space-full-key);
+}
+
+#space-key-active {
+	align-self: end;
+	grid-column: span 9;
+	animation-iteration-count: 1;
+	animation: space-key-animation 0.1s;
+}
+
+#command-key-default {
+	grid-column: span 3;
+	content: var(--command-full-key);
+}
+
+#command-key-active {
+	align-self: end;
+	grid-column: span 3;
+	animation-iteration-count: 1;
+	animation: command-key-animation 0.1s;
+}
+
+#alt-left-key-default {
+	grid-column: span 3;
+	content: var(--alt-full-key);
+}
+
+#alt-left-key-active {
+	align-self: end;
+	grid-column: span 3;
+	animation-iteration-count: 1;
+	animation: alt-key-animation 0.1s;
+}
+
+#alt-right-key-default {
+	grid-column: span 3;
+	content: var(--alt-full-key);
+}
+
+#alt-right-key-active {
+	align-self: end;
+	grid-column: span 3;
+	animation-iteration-count: 1;
+	animation: alt-key-animation 0.1s;
+}
+
+#semicolon-key-default {
+	grid-column: span 2;
+	content: var(--semicolon-full-key);
+}
+
+#semicolon-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: semicolon-key-animation 0.1s;
+}
+
+#backslash-key-default {
+	grid-column: span 3;
+	content: var(--backslash-full-key);
+}
+
+#backslash-key-active {
+	align-self: end;
+	grid-column: span 3;
+	animation-iteration-count: 1;
+	animation: backslash-key-animation 0.1s;
+}
+
+#backspace-key-default {
+	grid-column: span 4;
+	content: var(--backspace-full-key);
+}
+
+#backspace-key-active {
+	align-self: end;
+	grid-column: span 4;
+	animation-iteration-count: 1;
+	animation: backspace-key-animation 0.1s;
+}
+
+#caps-lock-key-default {
+	grid-column: span 4;
+	content: var(--caps-lock-full-key);
+}
+
+#caps-lock-key-active {
+	align-self: end;
+	grid-column: span 4;
+	animation-iteration-count: 1;
+	animation: caps-lock-key-animation 0.1s;
+}
+
+#shift-left-key-default {
+	grid-column: span 5;
+	content: var(--shift-left-full-key);
+}
+
+#shift-left-key-active {
+	align-self: end;
+	grid-column: span 5;
+	animation-iteration-count: 1;
+	animation: shift-left-key-animation 0.1s;
+}
+
+#shift-right-key-default {
+	grid-column: span 5;
+	content: var(--shift-right-full-key);
+}
+
+#shift-right-key-active {
+	align-self: end;
+	grid-column: span 5;
+	animation-iteration-count: 1;
+	animation: shift-right-key-animation 0.1s;
+}
+
+#open-bracket-key-default {
+	grid-column: span 2;
+	content: var(--open-bracket-full-key);
+}
+
+#open-bracket-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: open-bracket-key-animation 0.1s;
+}
+
+#close-bracket-key-default {
+	grid-column: span 2;
+	content: var(--close-bracket-full-key);
+}
+
+#close-bracket-key-active {
+	align-self: end;
+	grid-column: span 2;
+	animation-iteration-count: 1;
+	animation: close-bracket-key-animation 0.1s;
+}
+
+#control-left-key-default {
+	grid-column: span 3;
+	content: var(--control-full-key);
+}
+
+#control-left-key-active {
+	align-self: end;
+	grid-column: span 3;
+	animation-iteration-count: 1;
+	animation: control-key-animation 0.1s;
+}
+
+#control-right-key-default {
+	grid-column: span 3;
+	content: var(--control-full-key);
+}
+
+#control-right-key-active {
+	align-self: end;
+	grid-column: span 3;
+	animation-iteration-count: 1;
+	animation: control-key-animation 0.1s;
+}
+
+#function-left-key-default {
+	grid-column: span 3;
+	content: var(--function-full-key);
+}
+
+#function-left-key-active {
+	align-self: end;
+	grid-column: span 3;
+	animation-iteration-count: 1;
+	animation: function-key-animation 0.1s;
+}
+
+#function-right-key-default {
+	grid-column: span 3;
+	content: var(--function-full-key);
+}
+
+#function-right-key-active {
+	align-self: end;
+	grid-column: span 3;
+	animation-iteration-count: 1;
+	animation: function-key-animation 0.1s;
+}
