@@ -1,4 +1,4 @@
-// global variable
+// global variables
 const keys = [
 	['a-key-default', 'a-key-active'],
 	['b-key-default', 'b-key-active'],
@@ -618,4 +618,26 @@ window.addEventListener('load', function () {
 			}
 		}
 	});
+
+	document.addEventListener('click', function (event) {
+		let caps = document.querySelectorAll('span');
+		let keyCode = event.target.getAttribute('data-code'); //return keyCode on keydown
+		for (let i = 0; i < caps.length; i++) {
+			if (caps[i].getAttribute('data-code') === keyCode) {
+				let key = caps[i].getAttribute('id');
+				// this is for debugging purposes
+				console.log(`key = caps[${i}].getAttribute('${keyCode}')`, key);
+				let cap = document.querySelector(`#${key}`);
+				let index = keys.findIndex(function (row) {
+					return row[0] === key;
+				});
+				let animation = keys[index][1];
+				cap.setAttribute('id', animation);
+				cap.addEventListener('animationend', function () {
+					cap.setAttribute('id', keys[index][0]);
+				});
+			}
+		}
+	});
+	
 });
