@@ -63,190 +63,539 @@ const keys = [
 	['function-right-key-default', 'function-right-key-active'],
 ];
 
-const imgList = [
-	'https://res.cloudinary.com/bitkit/kb/l77.svg',
-	'https://res.cloudinary.com/bitkit/kb/to2.svg',
-	'https://res.cloudinary.com/bitkit/kb/s9t.svg',
-	'https://res.cloudinary.com/bitkit/kb/4jn.svg',
-	'https://res.cloudinary.com/bitkit/kb/be5.svg',
-	'https://res.cloudinary.com/bitkit/kb/kg3.svg',
-	'https://res.cloudinary.com/bitkit/kb/kg8.svg',
-	'https://res.cloudinary.com/bitkit/kb/x0g.svg',
-	'https://res.cloudinary.com/bitkit/kb/z2o.svg',
-	'https://res.cloudinary.com/bitkit/kb/7m4.svg',
-	'https://res.cloudinary.com/bitkit/kb/ch3.svg',
-	'https://res.cloudinary.com/bitkit/kb/0pk.svg',
-	'https://res.cloudinary.com/bitkit/kb/kc8.svg',
-	'https://res.cloudinary.com/bitkit/kb/v37.svg',
-	'https://res.cloudinary.com/bitkit/kb/d4m.svg',
-	'https://res.cloudinary.com/bitkit/kb/z0q.svg',
-	'https://res.cloudinary.com/bitkit/kb/xe9.svg',
-	'https://res.cloudinary.com/bitkit/kb/kx0.svg',
-	'https://res.cloudinary.com/bitkit/kb/4ky.svg',
-	'https://res.cloudinary.com/bitkit/kb/q7e.svg',
-	'https://res.cloudinary.com/bitkit/kb/go9.svg',
-	'https://res.cloudinary.com/bitkit/kb/vu6.svg',
-	'https://res.cloudinary.com/bitkit/kb/bf7.svg',
-	'https://res.cloudinary.com/bitkit/kb/5kz.svg',
-	'https://res.cloudinary.com/bitkit/kb/w1m.svg',
-	'https://res.cloudinary.com/bitkit/kb/hx2.svg',
-	'https://res.cloudinary.com/bitkit/kb/ma2.svg',
-	'https://res.cloudinary.com/bitkit/kb/he1.svg',
-	'https://res.cloudinary.com/bitkit/kb/e1q.svg',
-	'https://res.cloudinary.com/bitkit/kb/i46.svg',
-	'https://res.cloudinary.com/bitkit/kb/y2q.svg',
-	'https://res.cloudinary.com/bitkit/kb/u5x.svg',
-	'https://res.cloudinary.com/bitkit/kb/fe4.svg',
-	'https://res.cloudinary.com/bitkit/kb/w1f.svg',
-	'https://res.cloudinary.com/bitkit/kb/c0l.svg',
-	'https://res.cloudinary.com/bitkit/kb/m3w.svg',
-	'https://res.cloudinary.com/bitkit/kb/v0y.svg',
-	'https://res.cloudinary.com/bitkit/kb/ff5.svg',
-	'https://res.cloudinary.com/bitkit/kb/k1d.svg',
-	'https://res.cloudinary.com/bitkit/kb/hj8.svg',
-	'https://res.cloudinary.com/bitkit/kb/0mx.svg',
-	'https://res.cloudinary.com/bitkit/kb/x2k.svg',
-	'https://res.cloudinary.com/bitkit/kb/mc6.svg',
-	'https://res.cloudinary.com/bitkit/kb/9eb.svg',
-	'https://res.cloudinary.com/bitkit/kb/ef4.svg',
-	'https://res.cloudinary.com/bitkit/kb/qr4.svg',
-	'https://res.cloudinary.com/bitkit/kb/ac4.svg',
-	'https://res.cloudinary.com/bitkit/kb/w1c.svg',
-	'https://res.cloudinary.com/bitkit/kb/si4.svg',
-	'https://res.cloudinary.com/bitkit/kb/9mw.svg',
-	'https://res.cloudinary.com/bitkit/kb/0oz.svg',
-	'https://res.cloudinary.com/bitkit/kb/1c9.svg',
-	'https://res.cloudinary.com/bitkit/kb/pu7.svg',
-	'https://res.cloudinary.com/bitkit/kb/p7f.svg',
-	'https://res.cloudinary.com/bitkit/kb/be1.svg',
-	'https://res.cloudinary.com/bitkit/kb/w1n.svg',
-	'https://res.cloudinary.com/bitkit/kb/z9z.svg',
-	'https://res.cloudinary.com/bitkit/kb/j7n.svg',
-	'https://res.cloudinary.com/bitkit/kb/uw2.svg',
-	'https://res.cloudinary.com/bitkit/kb/dp4.svg',
-	'https://res.cloudinary.com/bitkit/kb/ca1.svg',
-	'https://res.cloudinary.com/bitkit/kb/i7z.svg',
-	'https://res.cloudinary.com/bitkit/kb/tx1.svg',
-	'https://res.cloudinary.com/bitkit/kb/k9a.svg',
-	'https://res.cloudinary.com/bitkit/kb/st9.svg',
-	'https://res.cloudinary.com/bitkit/kb/9uq.svg',
-	'https://res.cloudinary.com/bitkit/kb/g91.svg',
-	'https://res.cloudinary.com/bitkit/kb/4yg.svg',
-	'https://res.cloudinary.com/bitkit/kb/b13.svg',
-	'https://res.cloudinary.com/bitkit/kb/qp1.svg',
-	'https://res.cloudinary.com/bitkit/kb/e7p.svg',
-	'https://res.cloudinary.com/bitkit/kb/rw8.svg',
-	'https://res.cloudinary.com/bitkit/kb/sg5.svg',
-	'https://res.cloudinary.com/bitkit/kb/yo1.svg',
-	'https://res.cloudinary.com/bitkit/kb/k3j.svg',
-	'https://res.cloudinary.com/bitkit/kb/cr1.svg',
-	'https://res.cloudinary.com/bitkit/kb/y88.svg',
-	'https://res.cloudinary.com/bitkit/kb/br6.svg',
-	'https://res.cloudinary.com/bitkit/kb/x2u.svg',
-	'https://res.cloudinary.com/bitkit/kb/16b.svg',
-	'https://res.cloudinary.com/bitkit/kb/t2h.svg',
-	'https://res.cloudinary.com/bitkit/kb/f4n.svg',
-	'https://res.cloudinary.com/bitkit/kb/m0e.svg',
-	'https://res.cloudinary.com/bitkit/kb/cg3.svg',
-	'https://res.cloudinary.com/bitkit/kb/yd6.svg',
-	'https://res.cloudinary.com/bitkit/kb/kj1.svg',
-	'https://res.cloudinary.com/bitkit/kb/ib6.svg',
-	'https://res.cloudinary.com/bitkit/kb/2au.svg',
-	'https://res.cloudinary.com/bitkit/kb/gc1.svg',
-	'https://res.cloudinary.com/bitkit/kb/nu3.svg',
-	'https://res.cloudinary.com/bitkit/kb/f1c.svg',
-	'https://res.cloudinary.com/bitkit/kb/p33.svg',
-	'https://res.cloudinary.com/bitkit/kb/qd4.svg',
-	'https://res.cloudinary.com/bitkit/kb/7sc.svg',
-	'https://res.cloudinary.com/bitkit/kb/ie8.svg',
-	'https://res.cloudinary.com/bitkit/kb/g71.svg',
-	'https://res.cloudinary.com/bitkit/kb/pu4.svg',
-	'https://res.cloudinary.com/bitkit/kb/ad9.svg',
-	'https://res.cloudinary.com/bitkit/kb/8by.svg',
-	'https://res.cloudinary.com/bitkit/kb/k0w.svg',
-	'https://res.cloudinary.com/bitkit/kb/7nt.svg',
-	'https://res.cloudinary.com/bitkit/kb/sq2.svg',
-	'https://res.cloudinary.com/bitkit/kb/d5r.svg',
-	'https://res.cloudinary.com/bitkit/kb/1nd.svg',
-	'https://res.cloudinary.com/bitkit/kb/kx8.svg',
-	'https://res.cloudinary.com/bitkit/kb/li8.svg',
-	'https://res.cloudinary.com/bitkit/kb/4z0.svg',
-	'https://res.cloudinary.com/bitkit/kb/ad1.svg',
-	'https://res.cloudinary.com/bitkit/kb/4om.svg',
-	'https://res.cloudinary.com/bitkit/kb/nc8.svg',
-	'https://res.cloudinary.com/bitkit/kb/jq3.svg',
-	'https://res.cloudinary.com/bitkit/kb/i4c.svg',
-	'https://res.cloudinary.com/bitkit/kb/lm3.svg',
-	'https://res.cloudinary.com/bitkit/kb/f4r.svg',
-	'https://res.cloudinary.com/bitkit/kb/6fb.svg',
-	'https://res.cloudinary.com/bitkit/kb/zx9.svg',
-	'https://res.cloudinary.com/bitkit/kb/6yf.svg',
-	'https://res.cloudinary.com/bitkit/kb/v5z.svg',
-	'https://res.cloudinary.com/bitkit/kb/rg4.svg',
-	'https://res.cloudinary.com/bitkit/kb/i4x.svg',
-	'https://res.cloudinary.com/bitkit/kb/7j3.svg',
-	'https://res.cloudinary.com/bitkit/kb/v2l.svg',
-	'https://res.cloudinary.com/bitkit/kb/d5n.svg',
-	'https://res.cloudinary.com/bitkit/kb/i79.svg',
-	'https://res.cloudinary.com/bitkit/kb/t1u.svg',
-	'https://res.cloudinary.com/bitkit/kb/w5a.svg',
-	'https://res.cloudinary.com/bitkit/kb/1n3.svg',
-	'https://res.cloudinary.com/bitkit/kb/em0.svg',
-	'https://res.cloudinary.com/bitkit/kb/s6b.svg',
-	'https://res.cloudinary.com/bitkit/kb/qe3.svg',
-	'https://res.cloudinary.com/bitkit/kb/2gy.svg',
-	'https://res.cloudinary.com/bitkit/kb/r8q.svg',
-	'https://res.cloudinary.com/bitkit/kb/b2v.svg',
-	'https://res.cloudinary.com/bitkit/kb/xd5.svg',
-	'https://res.cloudinary.com/bitkit/kb/5xc.svg',
-	'https://res.cloudinary.com/bitkit/kb/5w8.svg',
-	'https://res.cloudinary.com/bitkit/kb/bn5.svg',
-	'https://res.cloudinary.com/bitkit/kb/3uz.svg',
-	'https://res.cloudinary.com/bitkit/kb/t5g.svg',
-	'https://res.cloudinary.com/bitkit/kb/ee9.svg',
-	'https://res.cloudinary.com/bitkit/kb/u8g.svg',
-	'https://res.cloudinary.com/bitkit/kb/ji0.svg',
-	'https://res.cloudinary.com/bitkit/kb/w12.svg',
-	'https://res.cloudinary.com/bitkit/kb/uz8.svg',
-	'https://res.cloudinary.com/bitkit/kb/q1s.svg',
-	'https://res.cloudinary.com/bitkit/kb/d7g.svg',
-	'https://res.cloudinary.com/bitkit/kb/r3v.svg',
-	'https://res.cloudinary.com/bitkit/kb/oe4.svg',
-	'https://res.cloudinary.com/bitkit/kb/mi5.svg',
-	'https://res.cloudinary.com/bitkit/kb/6cv.svg',
-	'https://res.cloudinary.com/bitkit/kb/6sd.svg',
-	'https://res.cloudinary.com/bitkit/kb/e0b.svg',
-	'https://res.cloudinary.com/bitkit/kb/u6n.svg',
-	'https://res.cloudinary.com/bitkit/kb/zh2.svg',
-	'https://res.cloudinary.com/bitkit/kb/fl2.svg',
-	'https://res.cloudinary.com/bitkit/kb/u68.svg',
-	'https://res.cloudinary.com/bitkit/kb/7ae.svg',
-	'https://res.cloudinary.com/bitkit/kb/a1w.svg',
-	'https://res.cloudinary.com/bitkit/kb/ga8.svg',
-	'https://res.cloudinary.com/bitkit/kb/a90.svg',
-	'https://res.cloudinary.com/bitkit/kb/4ym.svg',
-	'https://res.cloudinary.com/bitkit/kb/y4n.svg',
-	'https://res.cloudinary.com/bitkit/kb/h2r.svg',
-	'https://res.cloudinary.com/bitkit/kb/v6w.svg',
-	'https://res.cloudinary.com/bitkit/kb/nz1.svg',
-	'https://res.cloudinary.com/bitkit/kb/gg7.svg',
-	'https://res.cloudinary.com/bitkit/kb/ju1.svg',
-	'https://res.cloudinary.com/bitkit/kb/pl7.svg',
-	'https://res.cloudinary.com/bitkit/kb/w8w.svg',
-	'https://res.cloudinary.com/bitkit/kb/2fs.svg',
-	'https://res.cloudinary.com/bitkit/kb/6t4.svg',
-	'https://res.cloudinary.com/bitkit/kb/kc3.svg',
-	'https://res.cloudinary.com/bitkit/kb/pm9.svg',
-	'https://res.cloudinary.com/bitkit/kb/m11.svg',
+const vectorList = [
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--a-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--a-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--b-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--b-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--c-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--c-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--d-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--d-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--e-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--e-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--f-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--f-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--g-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--g-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--h-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--h-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--i-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--i-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--j-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--j-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--k-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--k-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--l-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--l-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--m-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--m-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--n-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--n-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--o-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--o-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--p-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--p-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--q-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--q-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--r-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--r-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--s-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--s-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--t-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--t-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--u-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--u-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--v-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--v-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--w-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--w-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--x-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--x-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--y-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--y-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--z-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--z-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--a-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--b-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--c-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--d-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--e-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--f-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--g-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--h-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--i-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--j-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--k-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--l-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--m-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--n-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--o-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--p-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--q-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--r-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--s-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--t-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--u-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--v-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--w-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--x-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--y-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--z-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--dot-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--dot-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--one-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--one-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--two-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--two-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--six-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--six-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--alt-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--alt-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--tab-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--tab-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--dot-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--one-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--two-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--six-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--alt-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--tab-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--plus-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--plus-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--zero-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--zero-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--four-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--four-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--five-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--five-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--nine-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--nine-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--plus-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--zero-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--four-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--five-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--nine-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--quote-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--quote-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--minus-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--minus-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--comma-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--comma-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--tilde-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--tilde-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--three-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--three-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--seven-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--seven-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--eight-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--eight-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--slash-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--slash-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--enter-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--enter-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--space-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--space-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--quote-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--minus-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--comma-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--tilde-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--three-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--seven-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--eight-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--slash-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--enter-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--space-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--command-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--command-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--control-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--control-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--command-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--control-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--function-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--function-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--function-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--semicolon-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--semicolon-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--backslash-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--backslash-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--backspace-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--backspace-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--caps-lock-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--caps-lock-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--semicolon-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--backslash-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--backspace-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--caps-lock-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--shift-left-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--shift-left-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--shift-left-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--shift-right-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--shift-right-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--shift-right-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--open-bracket-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--open-bracket-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--open-bracket-empty-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--close-bracket-full-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--close-bracket-half-key')
+		.slice(4, -1)}`,
+	`${getComputedStyle(document.documentElement)
+		.getPropertyValue('--close-bracket-empty-key')
+		.slice(4, -1)}`,
 ];
 
 window.addEventListener('load', function () {
 	// for loop for pushing array to memory
-	for (let i = 0; i < imgList.length; i++) {
-		let tempImg = document.createElement('img');
-		tempImg.src = imgList[i];
-		// tempImg.setAttribute('src', imgList[i]);
-		// document.querySelector('#preload').appendChild(tempImg);
+	for (let i = 0; i < vectorList.length; i++) {
+		let tempImage = document.createElement('img');
+		let preloader = document.querySelector('div');
+
+		tempImage.src = vectorList[i];
+		preloader.appendChild(tempImage);
 	}
 
 	document.addEventListener('keydown', function (event) {
@@ -254,21 +603,15 @@ window.addEventListener('load', function () {
 		let keyCode = event.code; //return keyCode on keydown
 		for (let i = 0; i < caps.length; i++) {
 			if (caps[i].getAttribute('data-code') === keyCode) {
-				//this is for debugging purposes
-				console.log(`if(caps[i].getAttribute('${keyCode}')`);
 				let key = caps[i].getAttribute('id');
 				// this is for debugging purposes
 				console.log(`key = caps[${i}].getAttribute('${keyCode}')`, key);
 				let cap = document.querySelector(`#${key}`);
 				let index = keys.findIndex(function (row) {
-					console.log(`${row[0]} === ${key}`);
 					return row[0] === key;
 				});
-				console.log(index);
 				let animation = keys[index][1];
-				console.log(animation);
 				cap.setAttribute('id', animation);
-				console.log(`cap.setAttribute('id', ${animation})`);
 				cap.addEventListener('animationend', function () {
 					cap.setAttribute('id', keys[index][0]);
 				});
