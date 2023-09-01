@@ -3,6 +3,25 @@
 /* imports a custom framework made in a previous project from jsDelivr */
 @import url(https://cdn.jsdelivr.net/gh/ktortolini/stu-side-project-01@main/assets/css/bitkit.min.css);
 
+@media screen {
+	div#preloader {
+		position: absolute;
+		left: -9999px;
+		top: -9999px;
+	}
+	div#preloader img {
+		display: block;
+	}
+}
+
+@media print {
+	div#preloader,
+	div#preloader img {
+		visibility: hidden;
+		display: none;
+	}
+}
+
 /* todo: add to bitkit */
 .position {
 	position: absolute;
