@@ -1,0 +1,102 @@
+[
+	{
+		"category": "Console Logs",
+		"id": "orypeftg8gz2tmvu",
+		"code": "console.log('Hello World!');"
+	},
+	{
+		"category": "Console Logs",
+		"id": "tsyo8b46928h222z",
+		"code": "console.log('Error:', error);"
+	},
+	{
+		"category": "Console Logs",
+		"id": "jym1ziadsotk4g55",
+		"code": "console.log('List:', subst1, subst2);"
+	},
+	{
+		"category": "Console Logs",
+		"id": "9h41q5jmvfhli7jh",
+		"code": "console.log('Hello' + ' ' + 'World!');"
+	},
+	{
+		"category": "Console Logs",
+		"id": "tjgpnqv1wphlv1y2",
+		"code": "console.log('%cHello World!', 'color: blue');"
+	},
+	{
+		"category": "Console Logs",
+		"id": "iljhmxustkbbwqo1",
+		"code": "console.log('Response:', JSON.stringify(obj));"
+	},
+	{
+		"category": "Console Logs",
+		"id": "djyunu8gzfn7u3uq",
+		"code": "console.log(new Date().toLocaleString());"
+	},
+	{
+		"category": "Console Logs",
+		"id": "bk62btt9o3y30hnw",
+		"code": "console.log('Arrays:', ...array1, ...array2);"
+	},
+	{
+		"category": "Console Logs",
+		"id": "rc2xck6p3nmjhljw",
+		"code": "console.log('Result:', ~~(calc('1 + 2')));"
+	},
+	{
+		"category": "Declarations",
+		"id": "kg6n2jvrr6qipyrj",
+		"code": "var number = 1;"
+	},
+	{
+		"category": "Declarations",
+		"id": "8d1vmht2ereo8ba2",
+		"code": "let numbers = [ 0, 1, 2, 3 ];"
+	},
+	{
+		"category": "Declarations",
+		"id": "37uudiqe6nfbw5lq",
+		"code": "const object = { name: 'objectName' };"
+	},
+	{
+		"category": "Declarations",
+		"id": "1g7cbtlxjrsqdibu",
+		"code": "let regex = new RegExp('Hello World!', 'g');"
+	},
+	{
+		"category": "Declarations",
+		"id": "c12q0hrasfsu6amx",
+		"code": "const map = new Map([ 'variable', 'value' ]);"
+	},
+	{
+		"category": "Declarations",
+		"id": "ng71fhl26694rux4",
+		"code": "const [ variable1, variable2 ] = [ '1', '2' ];"
+	},
+	{
+		"category": "Declarations",
+		"id": "jp0jbfl32lpokx8o",
+		"code": "const { property1, property2 } = object;"
+	},
+	{
+		"category": "Declarations",
+		"id": "rc2xck6p3nmjhljw",
+		"code": "const result = boolean ? value1 : value2;"
+	},
+	{
+		"category": "Declarations",
+		"id": "hbccpyw16748qnmx",
+		"code": "let myFunction = (value) => { return value };"
+	},
+	{
+		"category": "Declarations",
+		"id": "ox7q327smmihkw1r",
+		"code": "let myFunction = (value) => { return value };"
+	},
+	{
+		"category": "Declarations",
+		"id": "umilz3a09ohbjvex",
+		"code": "const regex = new RegExp('([0-9]{5})', 'gm');"
+	}
+]
