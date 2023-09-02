@@ -63,6 +63,7 @@ const keys = [
 	['function-right-key-default', 'function-right-key-active'],
 ];
 
+// preloader animations
 const vectorList = [
 	`${getComputedStyle(document.documentElement)
 		.getPropertyValue('--a-full-key')
@@ -593,11 +594,11 @@ window.addEventListener('load', function () {
 	for (let i = 0; i < vectorList.length; i++) {
 		let tempImage = document.createElement('img');
 		let preloader = document.querySelector('div');
-
+		// adds the images to the preloader
 		tempImage.src = vectorList[i];
 		preloader.appendChild(tempImage);
 	}
-
+	// creates an event listener for each key
 	document.addEventListener('keydown', function (event) {
 		let caps = document.querySelectorAll('span');
 		let keyCode = event.code; //return keyCode on keydown
@@ -618,7 +619,7 @@ window.addEventListener('load', function () {
 			}
 		}
 	});
-
+	// creates an event listener so the mouse can be used
 	document.addEventListener('click', function (event) {
 		let caps = document.querySelectorAll('span');
 		let keyCode = event.target.getAttribute('data-code'); //return keyCode on keydown
@@ -639,5 +640,4 @@ window.addEventListener('load', function () {
 			}
 		}
 	});
-	
 });
