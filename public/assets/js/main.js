@@ -615,16 +615,45 @@ const snippet = {
 	},
 };
 
+const preloader = {
+	element: document.querySelector('div'),
+	setPreloader: function () {
+		// for loop that goes through pushing array to memory
+		for (let i = 0; i < keyboard.profiles.length; i++) {
+			let tempImage = document.createElement('img');
+			// adds the images to the preloader
+			tempImage.src = keyboard.profiles[i];
+			this.element.appendChild(tempImage);
+		}
+	},
+	deletePreloader: function () {
+		if (preloader.element.hasChildNodes()) {
+			while (preloader.firstChild) {
+				preloader.removeChild(preloader.firstChild);
+				console.log('deleted');
+			}
+		}
+	},
+};
+
 // sets an event listener for 'load' event
 window.addEventListener('load', function () {
-	// for loop that goes through pushing array to memory
-	for (let i = 0; i < keyboard.profiles.length; i++) {
-		let tempImage = document.createElement('img');
-		let preloader = document.querySelector('div');
-		// adds the images to the preloader
-		tempImage.src = keyboard.profiles[i];
-		preloader.appendChild(tempImage);
-	}
+	// sets the preloader
+	preloader.setPreloader();
+	this.window.addEventListener('resize', function () {
+		preloader.deletePreloader();
+		preloader.setPreloader();
+	});
+	// adds the snippet to the page
+	let codeContainer = document.querySelector('note');
+	snippet
+		.getSnippet()
+		.then(function (display) {
+			codeContainer.textContent = display;
+		})
+		.catch(function (error) {
+			console.log(error);
+		});
 	// creates an event listener for each key
 	document.addEventListener('keydown', function (event) {
 		let caps = document.querySelectorAll('span');
@@ -676,17 +705,6 @@ window.addEventListener('load', function () {
 					cap.setAttribute('id', keyboard.keys[index][0]);
 				});
 			}
-		}
-		// changes snippet on enter
-		if (keyCode === 'Enter') {
-			snippet
-				.getSnippet()
-				.then(function (display) {
-					console.log('getSnippet()', display);
-				})
-				.catch(function (error) {
-					console.log(error);
-				});
 		}
 	});
 });
