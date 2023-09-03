@@ -605,7 +605,10 @@ const snippet = {
 				.then(function (data) {
 					let snippets = data;
 					let randomIndex = ~~(Math.random() * snippets.length);
-					this.code = JSON.stringify(snippets[randomIndex].code);
+					this.code = JSON.stringify(snippets[randomIndex].code).slice(
+						1,
+						-1,
+					);
 					resolve(this.code);
 				})
 				.catch(function (error) {
