@@ -31,6 +31,10 @@ body {
 	background-color: var(--green-color);
 }
 
+.t-row {
+	font-size: 1.2rem !important;
+}
+
 /* todo: add to bitkit */
 .position {
 	position: absolute;
