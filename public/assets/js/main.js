@@ -590,7 +590,7 @@ const keyboard = {
 };
 
 const snippet = {
-	codeString: null,
+	codeArray: [],
 	getSnippet: function () {
 		return new Promise(function (resolve, reject) {
 			fetch(`/api/code`, {
@@ -605,17 +605,21 @@ const snippet = {
 				.then(function (data) {
 					let snippets = data;
 					let randomIndex = ~~(Math.random() * snippets.length);
-					this.code = JSON.stringify(snippets[randomIndex].code).slice(
-						1,
-						-1,
-					);
-					resolve(this.code);
+					this.codeArray = JSON.stringify(snippets[randomIndex].code)
+						.slice(1, -1)
+						.split('');
+					resolve(this.codeArray);
 				})
 				.catch(function (error) {
 					reject(error);
 				});
 		});
 	},
+};
+
+const input = {
+	letters: null,
+	checkInput: function () {},
 };
 
 const preloader = {
@@ -651,15 +655,22 @@ window.addEventListener('load', function () {
 	let codeContainer = document.querySelector('note');
 	snippet
 		.getSnippet()
-		.then(function (display) {
-			codeContainer.textContent = display;
+		.then(function (array) {
+			let codeContainer = document.querySelector('note');
+			codeContainer.innerHTML = '';
+			array.forEach(function (letter) {
+				let letterContainer = document.createElement('span');
+				letterContainer.textContent = letter;
+				codeContainer.appendChild(letterContainer);
+			});
 		})
 		.catch(function (error) {
 			console.log(error);
 		});
 	// creates an event listener for each key
 	document.addEventListener('keydown', function (event) {
-		let caps = document.querySelectorAll('span');
+		let keyboardGrid = document.querySelector('.keyboard-grid');
+		let caps = keyboardGrid.querySelectorAll('span');
 		let keyCode = event.code; //return keyCode on keydown
 		for (let i = 0; i < caps.length; i++) {
 			if (caps[i].getAttribute('data-code') === keyCode) {
@@ -691,7 +702,8 @@ window.addEventListener('load', function () {
 	});
 	// creates an event listener so the mouse can be used
 	document.addEventListener('click', function (event) {
-		let caps = document.querySelectorAll('span');
+		let keyboardGrid = document.querySelector('.keyboard-grid');
+		let caps = keyboardGrid.querySelectorAll('span');
 		let keyCode = event.target.getAttribute('data-code'); //return keyCode on keydown
 		for (let i = 0; i < caps.length; i++) {
 			if (caps[i].getAttribute('data-code') === keyCode) {
