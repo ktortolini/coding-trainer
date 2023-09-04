@@ -590,6 +590,7 @@ const keyboard = {
 };
 
 const snippet = {
+	element: document.querySelector('note'),
 	codeArray: [],
 	getSnippet: function () {
 		return new Promise(function (resolve, reject) {
@@ -605,21 +606,61 @@ const snippet = {
 				.then(function (data) {
 					let snippets = data;
 					let randomIndex = ~~(Math.random() * snippets.length);
-					this.codeArray = JSON.stringify(snippets[randomIndex].code)
+					snippet.codeArray = JSON.stringify(snippets[randomIndex].code)
 						.slice(1, -1)
 						.split('');
-					resolve(this.codeArray);
+					resolve(snippet.codeArray);
 				})
 				.catch(function (error) {
 					reject(error);
 				});
 		});
 	},
+	deleteSnippet: function () {
+		if (snippet.element.hasChildNodes()) {
+			while (snippet.firstChild) {
+				snippet.removeChild(snippet.firstChild);
+				console.log('deleted');
+			}
+		}
+	},
 };
 
+/* working: this needs to be fixed currently */
+/* ..does not work, returns an error message */
 const input = {
-	letters: null,
-	checkInput: function () {},
+	key: null,
+	currentIndex: 0,
+	checkInput: function (event) {
+		try {
+			// sets the variables
+			this.key = event.key;
+			let letterElements = Array.from(
+				snippet.element.querySelectorAll('span'),
+			);
+			let textContentArray = letterElements.map(function (element) {
+				return element.textContent;
+			});
+			// this is for debugging purposes
+			console.log(`snippet.codeArray: ${textContentArray}.`);
+			// compares the variables
+			if (snippet.codeArray[input.currentIndex] === this.key) {
+				// this is for debugging purposes
+				console.log(`this.letters[${input.currentIndex}] === this.key`);
+				let currentElement = letterElements[input.currentIndex];
+				currentElement.style.animation =
+					'successAnimation 0.8s forwards linear';
+				// this is for debugging purposes
+				console.log(`currentElement.style.animation`);
+				// increments the index
+				input.currentIndex++;
+				// this is for debugging purposes
+				console.log(`input.${input.currentIndex}`);
+			}
+		} catch (error) {
+			console.log(error);
+		}
+	},
 };
 
 const preloader = {
@@ -652,16 +693,14 @@ window.addEventListener('load', function () {
 		preloader.setPreloader();
 	});
 	// adds the snippet to the page
-	let codeContainer = document.querySelector('note');
 	snippet
 		.getSnippet()
 		.then(function (array) {
-			let codeContainer = document.querySelector('note');
-			codeContainer.innerHTML = '';
+			snippet.deleteSnippet();
 			array.forEach(function (letter) {
 				let letterContainer = document.createElement('span');
 				letterContainer.textContent = letter;
-				codeContainer.appendChild(letterContainer);
+				snippet.element.appendChild(letterContainer);
 			});
 		})
 		.catch(function (error) {
@@ -671,9 +710,14 @@ window.addEventListener('load', function () {
 	document.addEventListener('keydown', function (event) {
 		let keyboardGrid = document.querySelector('.keyboard-grid');
 		let caps = keyboardGrid.querySelectorAll('span');
-		let keyCode = event.code; //return keyCode on keydown
+		// return keyCode on keydown
+		input.checkInput(event);
+		let keyCode = event.code;
+		// loops through the caps array
 		for (let i = 0; i < caps.length; i++) {
+			// checks if the keyCode matches the data-code
 			if (caps[i].getAttribute('data-code') === keyCode) {
+				// gets the id of the span or cap
 				let key = caps[i].getAttribute('id');
 				// this is for debugging purposes
 				console.log(`key = caps[${i}].getAttribute('${keyCode}')`, key);
@@ -687,17 +731,6 @@ window.addEventListener('load', function () {
 					cap.setAttribute('id', keyboard.keys[index][0]);
 				});
 			}
-		}
-		// changes snippet on enter
-		if (keyCode === 'Enter') {
-			snippet
-				.getSnippet()
-				.then(function (display) {
-					console.log('getSnippet()', display);
-				})
-				.catch(function (error) {
-					console.log(error);
-				});
 		}
 	});
 	// creates an event listener so the mouse can be used
