@@ -1,5 +1,3 @@
-// imports timer
-import('../../../timespan-milliseconds');
 // global objects
 const keyboard = {
 	keys: [
@@ -630,16 +628,31 @@ const snippet = {
 
 const input = {
 	// score variables
+	id: 0,
 	time: 0,
 	correct: 0,
 	incorrect: 0,
+	duration: 0.0,
+	perMinute: null,
 	// other variables
 	key: null,
 	currentIndex: 0,
 	checkInput: function (event) {
 		try {
 			// grabs the time
-			let start = now();
+			let start = new Date().getTime();
+			// precision for timer
+			function instance() {
+				input.time += 100;
+				input.duration = ~~(input.time / 100) / 10;
+				if (Math.round(input.duration) == input.duration) {
+					input.duration += '.0';
+				}
+				document.getElementById('timer').textContent = input.duration;
+				let diff = new Date().getTime() - start - input.time;
+				input.id = window.setTimeout(instance, 100 - diff);
+			}
+			window.setTimeout(instance, 100);
 			// sets the variables
 			this.key = event.key;
 			let letterElements = Array.from(
@@ -689,9 +702,16 @@ const input = {
 				// this is for debugging purposes
 				console.log(`${input.currentIndex}] === textContentArray.length`);
 				// todo: grab a new string from the api
-				// ends the timer
-				let duration = since(start);
-				console.log(`${duration} = now() - since()`);
+				input.perMinute = Math.round(
+					(input.correct / 5) * (input.duration / (1000 / 60)),
+				);
+				console.log(
+					`${input.duration} = now() - since() && ${input.perMinute}`,
+				);
+				// clears the running timer
+				window.clearTimeout(input.id);
+				// starts new snippet
+				initSnippet();
 			}
 		} catch (error) {
 			console.log(error);
@@ -720,14 +740,9 @@ const preloader = {
 	},
 };
 
-// sets an event listener for 'load' event
-window.addEventListener('load', function () {
-	// sets the preloader
-	preloader.setPreloader();
-	this.window.addEventListener('resize', function () {
-		preloader.deletePreloader();
-		preloader.setPreloader();
-	});
+function initSnippet() {
+	// deletes the snippet
+	snippet.deleteSnippet();
 	// adds the snippet to the page
 	snippet
 		.getSnippet()
@@ -742,6 +757,18 @@ window.addEventListener('load', function () {
 		.catch(function (error) {
 			console.log(error);
 		});
+}
+
+// sets an event listener for 'load' event
+window.addEventListener('load', function () {
+	// sets the preloader
+	preloader.setPreloader();
+	this.window.addEventListener('resize', function () {
+		preloader.deletePreloader();
+		preloader.setPreloader();
+	});
+	// starts a snippet
+	initSnippet();
 	// creates an event listener for each key
 	document.addEventListener('keydown', function (event) {
 		let keyboardGrid = document.querySelector('.keyboard-grid');
