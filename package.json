@@ -11,8 +11,9 @@
 	"author": "ktortolini",
 	"license": "MIT",
 	"dependencies": {
-		"express": "^4.16.4",
+		"path": "^0.12.7",
 		"nodemon": "^3.0.1",
-		"path": "^0.12.7"
+		"express": "^4.16.4",
+		"timespan-milliseconds": "^1.2.0"
 	}
 }
