@@ -1,3 +1,5 @@
+// imports timer
+import('../../../timespan-milliseconds');
 // global objects
 const keyboard = {
 	keys: [
@@ -626,13 +628,18 @@ const snippet = {
 	},
 };
 
-/* working: this needs to be fixed currently */
-/* ..does not work, returns an error message */
 const input = {
+	// score variables
+	time: 0,
+	correct: 0,
+	incorrect: 0,
+	// other variables
 	key: null,
 	currentIndex: 0,
 	checkInput: function (event) {
 		try {
+			// grabs the time
+			let start = now();
 			// sets the variables
 			this.key = event.key;
 			let letterElements = Array.from(
@@ -644,18 +651,47 @@ const input = {
 			// this is for debugging purposes
 			console.log(`snippet.codeArray: ${textContentArray}.`);
 			// compares the variables
-			if (snippet.codeArray[input.currentIndex] === this.key) {
+			if (input.currentIndex !== textContentArray.length) {
+				if (snippet.codeArray[input.currentIndex] === this.key) {
+					// this is for debugging purposes
+					console.log(`this.letters[${input.currentIndex}] === this.key`);
+					let currentElement = letterElements[input.currentIndex];
+					currentElement.style.animation =
+						'successAnimation 0.8s forwards linear';
+					// this is for debugging purposes
+					console.log(`currentElement.style.animation`);
+					// increments variables
+					input.correct++;
+					input.currentIndex++;
+					// this is for debugging purposes
+					console.log(`input.${input.currentIndex}`);
+				} else if (snippet.codeArray[input.currentIndex] !== this.key) {
+					// increments variable
+					input.incorrect++;
+					// checks if the backspace key was pressed
+					if (event.code === 'Backspace') {
+						let currentElement = letterElements[input.currentIndex];
+						currentElement.style.animation =
+							'clearAnimation 0.8s forwards linear';
+					} else {
+						// this is for debugging purposes
+						console.log(
+							`this.letters[${input.currentIndex}] !== this.key`,
+						);
+						let currentElement = letterElements[input.currentIndex];
+						currentElement.style.animation =
+							'warningAnimation 0.8s forwards linear';
+						// this is for debugging purposes
+						console.log(`currentElement.style.animation`);
+					}
+				}
+			} else if (input.currentIndex === textContentArray.length) {
 				// this is for debugging purposes
-				console.log(`this.letters[${input.currentIndex}] === this.key`);
-				let currentElement = letterElements[input.currentIndex];
-				currentElement.style.animation =
-					'successAnimation 0.8s forwards linear';
-				// this is for debugging purposes
-				console.log(`currentElement.style.animation`);
-				// increments the index
-				input.currentIndex++;
-				// this is for debugging purposes
-				console.log(`input.${input.currentIndex}`);
+				console.log(`${input.currentIndex}] === textContentArray.length`);
+				// todo: grab a new string from the api
+				// ends the timer
+				let duration = since(start);
+				console.log(`${duration} = now() - since()`);
 			}
 		} catch (error) {
 			console.log(error);
