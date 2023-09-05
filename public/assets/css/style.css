@@ -22,6 +22,18 @@
 	}
 }
 
+/* the clearing animation */
+@keyframes clearAnimation {
+	0% {
+		/* leave this empty */
+	}
+	100% {
+		color: var(--default-text-color);
+		background-color: transparent;
+		border-color: transparent;
+	}
+}
+
 :root {
 	--green-color: hsl(76.1, 50%, 67.8%);
 }
@@ -57,7 +69,7 @@ a {
 	display: grid;
 	grid-gap: 0px;
 	/* setting width and height */
-	transform: scale(1.7);
+	transform: scale(2);
 	/* setting up the columns and the rows */
 	grid-template-rows: repeat(5, 16px); /* 5 rows, height of 16px */
 	grid-template-columns: repeat(30, 8px); /* 30 columns, width of 8px */
