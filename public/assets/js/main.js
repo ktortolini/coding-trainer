@@ -635,6 +635,10 @@ const input = {
 	incorrect: 0,
 	duration: 0.0,
 	perMinute: null,
+	// persistent score variables
+	totalTime: 0,
+	totalCorrect: 0,
+	totalIncorrect: 0,
 	// other variables
 	key: null,
 	currentIndex: 0,
@@ -716,6 +720,19 @@ const input = {
 				);
 				// clears the running timer
 				window.clearTimeout(input.id);
+				// pushes the score to totals
+				input.totalTime += input.time;
+				input.totalCorrect += input.correct;
+				input.totalIncorrect += input.incorrect;
+				// shows the score
+				document.getElementById(
+					'score',
+				).textContent = `WPM ${input.perMinute} | Correct ${input.totalCorrect} | Incorrect ${input.totalIncorrect}`;
+				// clears the scores
+				input.time = 0;
+				input.correct = 0;
+				input.incorrect = 0;
+				input.duration = 0.0;
 				// starts new snippet
 				initSnippet();
 				// clears current index
