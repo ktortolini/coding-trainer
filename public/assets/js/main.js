@@ -618,9 +618,10 @@ const snippet = {
 	},
 	deleteSnippet: function () {
 		if (snippet.element.hasChildNodes()) {
-			while (snippet.firstChild) {
-				snippet.removeChild(snippet.firstChild);
-				console.log('deleted');
+			while (snippet.element.firstChild) {
+				console.log(`snippet.${snippet.element.firstChild}`);
+				snippet.element.removeChild(snippet.element.firstChild);
+				console.log(`${snippet.element.hasChildNodes()}`, `while()`);
 			}
 		}
 	},
@@ -648,8 +649,11 @@ const input = {
 				if (Math.round(input.duration) == input.duration) {
 					input.duration += '.0';
 				}
+				// uses the timer to add input duration for precision
 				document.getElementById('timer').textContent = input.duration;
+				// calculates the difference between the times
 				let diff = new Date().getTime() - start - input.time;
+				// sets a increment for the timer using setTimeout()
 				input.id = window.setTimeout(instance, 100 - diff);
 			}
 			window.setTimeout(instance, 100);
@@ -701,7 +705,9 @@ const input = {
 			} else if (input.currentIndex === textContentArray.length) {
 				// this is for debugging purposes
 				console.log(`${input.currentIndex}] === textContentArray.length`);
-				// todo: grab a new string from the api
+				// clears the timer
+				input.deleteTimer();
+				// sets the perMinute variable
 				input.perMinute = Math.round(
 					(input.correct / 5) * (input.duration / (1000 / 60)),
 				);
@@ -712,15 +718,22 @@ const input = {
 				window.clearTimeout(input.id);
 				// starts new snippet
 				initSnippet();
+				// clears current index
+				input.currentIndex = 0;
 			}
 		} catch (error) {
 			console.log(error);
 		}
 	},
+	deleteTimer: function () {
+		if (document.getElementById('timer')) {
+			document.getElementById('timer').textContent = '';
+		}
+	},
 };
 
 const preloader = {
-	element: document.querySelector('div'),
+	element: document.getElementById('preloader'),
 	setPreloader: function () {
 		// for loop that goes through pushing array to memory
 		for (let i = 0; i < keyboard.profiles.length; i++) {
@@ -747,7 +760,6 @@ function initSnippet() {
 	snippet
 		.getSnippet()
 		.then(function (array) {
-			snippet.deleteSnippet();
 			array.forEach(function (letter) {
 				let letterContainer = document.createElement('span');
 				letterContainer.textContent = letter;
