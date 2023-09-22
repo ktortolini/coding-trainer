@@ -4,9 +4,19 @@ const express = require('express');
 // imports the middleware module
 const { middleware } = require('./middleware/middleware');
 
+const app = express();
 const PORT = process.env.PORT || 3001;
 
-const app = express();
+// configures the session
+const sess = {
+	secret: 'mhs45b4773cr912x',
+	cookie: {},
+	resave: false,
+	saveUninitialized: true,
+	store: new SequelizeStore({
+		db: sequelize,
+	}),
+};
 
 // the middleware for serving static files
 app.use(middleware);
