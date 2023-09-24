@@ -6,16 +6,33 @@
 		<meta name="description" content="" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+		<link rel="reset" type="text/css" href="./assets/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+		<!-- done: updated the src of javascript file -->
+		<script async src="./assets/js/index.js"></script>
+		<script defer src="./assets/js/score.js"></script>
 	</head>
-	<body>
+	<body class="bdy-container">
+		<br />
 		<header>
-			<nav></nav>
+			<!-- todo: header goes here -->
 		</header>
 		<main>
-			<section></section>
-			<section></section>
-			<section></section>
+			<section class="grphc-container flex">
+				<article class="t-row block"><note></note></article>
+			</section>
 		</main>
+		<section>
+			<form class="f-row block signup-form">
+				<div class="inv-fieldset">
+					<label id="username-label" for="username-row">Name:</label>
+					<span class="in-row"><input id="username-row" /></span>
+				</div>
+				<button class="i-row" type="submit">Play</button>
+				<br />
+			</form>
+		</section>
 		<footer></footer>
 	</body>
 </html>
