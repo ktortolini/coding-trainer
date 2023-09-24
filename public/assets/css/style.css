@@ -54,6 +54,12 @@ a {
 	font-size: 1.2rem !important;
 }
 
+.i-row {
+	/* changes the border sizing */
+	border-width: 14px !important;
+	border-image-slice: 5 !important;
+}
+
 /* todo: add to bitkit */
 .position {
 	position: absolute;
