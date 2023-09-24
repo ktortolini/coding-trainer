@@ -18,18 +18,26 @@ const PORT = process.env.PORT || 3001;
 // configures the session
 const sess = {
 	secret: 'mhs45b4773cr912x',
-	cookie: {},
+	cookie: {
+		secure: true,
+		maxAge: 300000,
+		httpOnly: true,
+		sameSite: 'strict',
+	},
 	resave: false,
 	saveUninitialized: true,
 	store: new SequelizeStore({
 		db: sequelize,
 	}),
 };
+// uses the configuration
+app.use(session(sess));
 
 // the middleware for serving static files
 app.use(middleware);
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true })); //decrypts
+app.use(express.static(path.join(__dirname, 'public')));
 
 // get route for homepage
 app.get('/', function (req, res) {
@@ -43,23 +51,18 @@ app.get('/trainer', function (req, res) {
 
 // post route for user
 app.post('/user', async function (req, res) {
-	try {
-		const userData = await User.create({
-			name: req.body.name,
-		});
-		// sets the variables for the session
-		req.session.save(() => {
-			req.session.user_id = userData.id;
-			req.session.user_name = userData.name;
-			req.session.logged_in = true;
-		});
-		// returns the userData
-		res.status(200).json(userData);
-	} catch (err) {
-		res.status(400).json(err);
-		// this is for debugging purposes
-		console.log(`catch (${err.message})`);
-	}
+	const userData = await User.create({
+		name: req.body.name,
+	});
+	// sets the variables for the session
+	req.session.save(() => {
+		req.session.user_name = userData.name;
+		req.session.logged_in = true;
+	});
+	// this is for debugging purposes
+	console.log(`req.session = ${JSON.stringify(req.session)}`);
+	// returns the userData
+	res.status(200).json(userData);
 });
 
 // get routes for api code and scores
@@ -75,7 +78,11 @@ app.get('/api/scores', (req, res) => {
 app.post('/api/scores', function (req, res) {
 	// creates a new score
 	let data = [];
-	const score = req.body;
+	const score = {
+		wpm: req.body.wpm,
+		correct: req.body.correct,
+		user_name: req.session.user_name,
+	};
 	try {
 		// reads and parses the database file
 		data = JSON.parse(fs.readFileSync('./db/json/scores.json', 'utf8'));
@@ -86,8 +93,6 @@ app.post('/api/scores', function (req, res) {
 	// this is for debugging purposes
 	console.log(`const data = ${JSON.stringify(data)}`);
 	console.log(`const score = ${JSON.stringify(req.body)}`);
-	// adds a unique id
-	score.id = uniqId();
 	// pushes to array
 	data.push(score);
 	// sorts the array in descending order
@@ -97,7 +102,9 @@ app.post('/api/scores', function (req, res) {
 	res.json(data);
 });
 
-// listening for requests
-app.listen(PORT, function () {
-	console.log(`App listening at http://localhost:${PORT}`);
+// syncs the sequelize models and starts the server
+sequelize.sync({ force: false }).then(() => {
+	app.listen(PORT, () =>
+		console.log(`Now listening on http://localhost:${PORT}`),
+	);
 });
