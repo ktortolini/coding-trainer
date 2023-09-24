@@ -58,8 +58,21 @@ const score = {
 			},
 			totalScore: function () {
 				return {
-					wpm: this.perMinute(),
-					correct: this.totalCorrect(),
+					wpm: score.getScore().perMinute(),
+					correct: score.getScore().totalCorrect(),
+					user_name: () => {
+						document.cookie.split(';').forEach((param) => {
+							if (param.trim().startsWith('user_name')) {
+								// this is for debugging purposes
+								console.log(
+									`document.cookie.split(';').forEach((param) => {...})`,
+									param,
+								);
+								// returns the value
+								return param.split('=')[1];
+							}
+						});
+					},
 				};
 			},
 		};
