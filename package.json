@@ -12,8 +12,17 @@
 	"license": "MIT",
 	"dependencies": {
 		"path": "^0.12.7",
+		"uniqid": "^5.2.0",
+		"bcrypt": "^5.1.1",
+		"mysql2": "^3.6.0",
+		"dotenv": "^16.3.1",
 		"nodemon": "^3.0.1",
 		"express": "^4.16.4",
-		"timespan-milliseconds": "^1.2.0"
+		"bad-words": "^3.0.4",
+		"fs": "0.0.1-security",
+		"sequelize": "^6.32.1",
+		"express-session": "^1.17.3",
+		"express-handlebars": "^7.1.2",
+		"connect-session-sequelize": "^7.1.7"
 	}
 }
