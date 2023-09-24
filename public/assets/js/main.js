@@ -628,9 +628,10 @@ const snippet = {
 };
 
 const input = {
-	// score variables
+	// unique id
 	id: 0,
-	time: 0,
+	// score variables
+	time: null,
 	correct: 0,
 	incorrect: 0,
 	duration: 0.0,
@@ -639,28 +640,21 @@ const input = {
 	totalTime: 0,
 	totalCorrect: 0,
 	totalIncorrect: 0,
+	myTimer: null,
 	// other variables
 	key: null,
 	currentIndex: 0,
+	startTimer: function () {
+		time = 0;
+		myTimer = setInterval(() => {
+			// increments the time
+			time++;
+			// this is for debugging purposes
+			console.log(`setInterval(() => {...}, 1000)`, time);
+		}, 1000);
+	},
 	checkInput: function (event) {
 		try {
-			// grabs the time
-			let start = new Date().getTime();
-			// precision for timer
-			function instance() {
-				input.time += 100;
-				input.duration = ~~(input.time / 100) / 10;
-				if (Math.round(input.duration) == input.duration) {
-					input.duration += '.0';
-				}
-				// uses the timer to add input duration for precision
-				document.getElementById('timer').textContent = input.duration;
-				// calculates the difference between the times
-				let diff = new Date().getTime() - start - input.time;
-				// sets a increment for the timer using setTimeout()
-				input.id = window.setTimeout(instance, 100 - diff);
-			}
-			window.setTimeout(instance, 100);
 			// sets the variables
 			this.key = event.key;
 			let letterElements = Array.from(
@@ -709,9 +703,11 @@ const input = {
 			} else if (input.currentIndex === textContentArray.length) {
 				// this is for debugging purposes
 				console.log(`${input.currentIndex}] === textContentArray.length`);
+				clearInterval(myTimer);
 				// clears the timer
 				input.deleteTimer();
 				// sets the perMinute variable
+				input.duration = time;
 				input.perMinute = Math.round(
 					(input.correct / 5) * (input.duration / (1000 / 60)),
 				);
@@ -733,16 +729,27 @@ const input = {
 				input.correct = 0;
 				input.incorrect = 0;
 				input.duration = 0.0;
-				// starts new snippet
+				// sets the score
+				score.setScore(score.getScore().totalScore());
+				let scoreValues = score.getScore().totalScore();
+				// this is for debugging purposes
+				console.log(
+					`score.setScore(${scoreValues.wpm}, ${scoreValues.correct})`,
+				);
+				// starts new snippet & timer
 				initSnippet();
+				input.startTimer();
 				// clears current index
 				input.currentIndex = 0;
 			}
 		} catch (error) {
-			console.log(error);
+			console.log(error.message);
 		}
 	},
 	deleteTimer: function () {
+		// todo: currently not using this
+		// this is for debugging purposes
+		console.log(`deleteTimer: () => {...}`);
 		if (document.getElementById('timer')) {
 			document.getElementById('timer').textContent = '';
 		}
@@ -798,6 +805,7 @@ window.addEventListener('load', function () {
 	});
 	// starts a snippet
 	initSnippet();
+	input.startTimer();
 	// creates an event listener for each key
 	document.addEventListener('keydown', function (event) {
 		let keyboardGrid = document.querySelector('.keyboard-grid');
