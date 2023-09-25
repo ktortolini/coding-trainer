@@ -40,7 +40,7 @@ const showScores = async () => {
 	// compares the regular expression to the data
 	if (data[0].user_name) {
 		let name = JSON.stringify(data[0].user_name);
-		document.querySelector('#username1').textContent = name;
+		document.querySelector('#username1').textContent = name.slice(1, -1);
 	} else {
 		document.querySelector('#username1').textContent = `???`;
 	}
@@ -49,7 +49,7 @@ const showScores = async () => {
 	// compares the regular expression to the data
 	if (data[1].user_name) {
 		let name = JSON.stringify(data[1].user_name);
-		document.querySelector('#username2').textContent = name;
+		document.querySelector('#username2').textContent = name.slice(1, -1);
 	} else {
 		document.querySelector('#username2').textContent = `???`;
 	}
@@ -58,7 +58,7 @@ const showScores = async () => {
 	// compares the regular expression to the data
 	if (data[2].user_name) {
 		let name = JSON.stringify(data[2].user_name);
-		document.querySelector('#username3').textContent = name;
+		document.querySelector('#username3').textContent = name.slice(1, -1);
 	} else {
 		document.querySelector('#username3').textContent = `???`;
 	}

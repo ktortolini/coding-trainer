@@ -645,13 +645,20 @@ const input = {
 	key: null,
 	currentIndex: 0,
 	startTimer: function () {
-		time = 0;
-		myTimer = setInterval(() => {
-			// increments the time
-			time++;
-			// this is for debugging purposes
-			console.log(`setInterval(() => {...}, 1000)`, time);
-		}, 1000);
+		// grabs the epoch time
+		let start = new Date().getTime();
+		// precision for timer, calculates the delta
+		function instance() {
+			input.time += 100;
+			input.duration = ~~(input.time / 100) / 10;
+			if (Math.round(input.duration) == input.duration) {
+				input.duration += '.0';
+			}
+			document.getElementById('timer').textContent = input.duration;
+			let diff = new Date().getTime() - start - input.time;
+			input.id = window.setTimeout(instance, 100 - diff);
+		}
+		window.setTimeout(instance, 100);
 	},
 	checkInput: function (event) {
 		try {
@@ -703,23 +710,18 @@ const input = {
 			} else if (input.currentIndex === textContentArray.length) {
 				// this is for debugging purposes
 				console.log(`${input.currentIndex}] === textContentArray.length`);
-				clearInterval(myTimer);
-				// clears the timer
-				input.deleteTimer();
-				// sets the perMinute variable
-				input.duration = time;
-				input.perMinute =
-					Math.round(input.correct / 5 / input.duration) * 60;
-				// words divided by seconds, multiply by 60 seconds
-				// new Date().getTime gives a time format called EPOCH time,
-				// subtract the two numbers to get the DELTA, or difference
-				// input.perMinute = Math.round(
-				// 	(input.correct / 5) * (input.duration / (1000 / 60)),
-				// );
-				console.log(`correct $= ${input.correct}`);
+				// this is for debugging purposes
+				console.log(`time = ${input.time}, duration = ${input.duration}`);
+				// calculates characters per minute
+				input.perMinute = (input.correct / (input.duration * 1000)) * 60000;
 				console.log(
-					`${input.duration} $= now() - since() && ${input.perMinute}`,
+					`correct = ${input.correct}, time = ${input.time}, duration = ${input.duration}, perMinute = ${input.perMinute}`,
 				);
+				console.log(
+					`${input.duration} = now() - since() && ${input.perMinute}`,
+				);
+				// clears the timer element
+				input.deleteTimer();
 				// clears the running timer
 				window.clearTimeout(input.id);
 				// pushes the score to totals
@@ -729,7 +731,9 @@ const input = {
 				// shows the score
 				document.getElementById(
 					'score',
-				).textContent = `WPM ${input.perMinute} | Correct ${input.totalCorrect} | Incorrect ${input.totalIncorrect}`;
+				).textContent = `CPM ${~~input.perMinute} | Correct ${
+					input.totalCorrect
+				} | Incorrect ${input.totalIncorrect}`;
 				// clears the scores
 				input.time = 0;
 				input.correct = 0;
@@ -749,7 +753,10 @@ const input = {
 				input.currentIndex = 0;
 			}
 		} catch (error) {
+			// this is for debugging purposes
+			console.log(error);
 			console.log(error.message);
+			console.log(error.stack);
 		}
 	},
 	deleteTimer: function () {
