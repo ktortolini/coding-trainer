@@ -43,45 +43,55 @@ const showScores = async () => {
 	let totalCorrect = new RegExp('[^0-9]*[|][^0-9]*([0-9]+)', 's');
 	// compares the regular expression to the data
 	if (data[0].user_name) {
-		let name = JSON.stringify(data[0].user_name);
-		document.querySelector('#username1').textContent = name.slice(1, -1);
+		try {
+			let name = JSON.stringify(data[0].user_name);
+			document.querySelector('#username1').textContent = name.slice(1, -1);
+		} catch (error) {
+			console.log(`catch (${error.stack})`);
+		}
 	} else {
 		document.querySelector('#username1').textContent = `???`;
 	}
-	document.querySelector('#wpm1').textContent = data[0].wpm;
-	document.querySelector('#correct1').textContent = data[0].correct;
+	try {
+		document.querySelector('#cpm1').textContent = data[0].wpm;
+		document.querySelector('#correct1').textContent = data[0].correct;
+	} catch (error) {
+		console.log(`catch (${error.stack})`);
+	}
 	// compares the regular expression to the data
 	if (data[1].user_name) {
-		let name = JSON.stringify(data[1].user_name);
-		document.querySelector('#username2').textContent = name.slice(1, -1);
+		try {
+			let name = JSON.stringify(data[1].user_name);
+			document.querySelector('#username2').textContent = name.slice(1, -1);
+		} catch (error) {
+			console.log(`catch (${error.stack})`);
+		}
 	} else {
 		document.querySelector('#username2').textContent = `???`;
 	}
-	document.querySelector('#wpm2').textContent = data[1].wpm;
-	document.querySelector('#correct2').textContent = data[1].correct;
+	try {
+		document.querySelector('#cpm2').textContent = data[1].wpm;
+		document.querySelector('#correct2').textContent = data[1].correct;
+	} catch (error) {
+		console.log(`catch (${error.stack})`);
+	}
 	// compares the regular expression to the data
 	if (data[2].user_name) {
-		let name = JSON.stringify(data[2].user_name);
-		document.querySelector('#username3').textContent = name.slice(1, -1);
+		try {
+			let name = JSON.stringify(data[2].user_name);
+			document.querySelector('#username3').textContent = name.slice(1, -1);
+		} catch (error) {
+			console.log(`catch (${error.stack})`);
+		}
 	} else {
 		document.querySelector('#username3').textContent = `???`;
 	}
-	document.querySelector('#wpm3').textContent = data[2].wpm;
-	document.querySelector('#correct3').textContent = data[2].correct;
-	// if (JSON.stringify(data).match(perMinute)) {
-	// 	let wpm = JSON.stringify(data).match(perMinute);
-	// 	document.querySelector('#wpm').textContent = wpm[1];
-	// } else {
-	// 	document.querySelector('#wpm').textContent = `???`;
-	// }
-	// if (JSON.stringify(data).match(totalCorrect)) {
-	// 	let correct = JSON.stringify(data).match(totalCorrect);
-	// 	document.querySelector('#correct').textContent = correct[1];
-	// } else {
-	// 	document.querySelector('#correct').textContent = `???`;
-	// }
-	document.querySelector('#wpm1').textContent = data[0].wpm;
-	document.querySelector('#correct1').textContent = data[0].correct;
+	try {
+		document.querySelector('#cpm3').textContent = data[2].wpm;
+		document.querySelector('#correct3').textContent = data[2].correct;
+	} catch (error) {
+		console.log(`catch (${error.stack})`);
+	}
 };
 
 const signupForm = document.querySelector('.signup-form');
