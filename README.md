@@ -94,7 +94,7 @@ The root directory of the web application will show the high-scores and display 
 This web application has been deployed on [Heroku]().
 ## _Credits_
 
-The ITCH, JS, and GITHUB PAGES readme file icons on the top were made by [Ileriayo](https://github.com/Ileriayo) with a link provided below: https://github.com/Ileriayo/markdown-badges#badges. 
+The ITCH, JS, NODE and HEROKU readme file icons on the top were made by [Ileriayo](https://github.com/Ileriayo) with a link provided below: https://github.com/Ileriayo/markdown-badges#badges. 
 
 Likewise, the wonderful keyboard asset by [illugion](https://illugion.itch.io/) was used to create this mini project, the specific link provided below: https://illugion.itch.io/pixel-keyboard.
 
