@@ -28,28 +28,56 @@ const signup = async (event) => {
 const showScores = async () => {
 	const response = await fetch('/api/scores');
 	const data = await response.json();
+	// accessing after
+	data.sort((a, b) => {
+		return b.wpm - a.wpm;
+	});
+	// this is for debugging purposes
+	console.log('data', data);
 	// adds regular expressions to extract from data
 	let perMinute = new RegExp('[^0-9]*([0-9]+).*', 's');
 	let totalCorrect = new RegExp('[^0-9]*[|][^0-9]*([0-9]+)', 's');
 	// compares the regular expression to the data
-	if (data.user_name) {
-		let name = JSON.stringify(data.user_name);
-		document.querySelector('#username').textContent = name;
+	if (data[0].user_name) {
+		let name = JSON.stringify(data[0].user_name);
+		document.querySelector('#username1').textContent = name;
 	} else {
-		document.querySelector('#username').textContent = `???`;
+		document.querySelector('#username1').textContent = `???`;
 	}
-	if (JSON.stringify(data).match(perMinute)) {
-		let wpm = JSON.stringify(data).match(perMinute);
-		document.querySelector('#wpm').textContent = wpm[1];
+	document.querySelector('#wpm1').textContent = data[0].wpm;
+	document.querySelector('#correct1').textContent = data[0].correct;
+	// compares the regular expression to the data
+	if (data[1].user_name) {
+		let name = JSON.stringify(data[1].user_name);
+		document.querySelector('#username2').textContent = name;
 	} else {
-		document.querySelector('#wpm').textContent = `???`;
+		document.querySelector('#username2').textContent = `???`;
 	}
-	if (JSON.stringify(data).match(totalCorrect)) {
-		let correct = JSON.stringify(data).match(totalCorrect);
-		document.querySelector('#correct').textContent = correct[1];
+	document.querySelector('#wpm2').textContent = data[1].wpm;
+	document.querySelector('#correct2').textContent = data[1].correct;
+	// compares the regular expression to the data
+	if (data[2].user_name) {
+		let name = JSON.stringify(data[2].user_name);
+		document.querySelector('#username3').textContent = name;
 	} else {
-		document.querySelector('#correct').textContent = `???`;
+		document.querySelector('#username3').textContent = `???`;
 	}
+	document.querySelector('#wpm3').textContent = data[2].wpm;
+	document.querySelector('#correct3').textContent = data[2].correct;
+	// if (JSON.stringify(data).match(perMinute)) {
+	// 	let wpm = JSON.stringify(data).match(perMinute);
+	// 	document.querySelector('#wpm').textContent = wpm[1];
+	// } else {
+	// 	document.querySelector('#wpm').textContent = `???`;
+	// }
+	// if (JSON.stringify(data).match(totalCorrect)) {
+	// 	let correct = JSON.stringify(data).match(totalCorrect);
+	// 	document.querySelector('#correct').textContent = correct[1];
+	// } else {
+	// 	document.querySelector('#correct').textContent = `???`;
+	// }
+	document.querySelector('#wpm1').textContent = data[0].wpm;
+	document.querySelector('#correct1').textContent = data[0].correct;
 };
 
 const signupForm = document.querySelector('.signup-form');

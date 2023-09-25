@@ -50,7 +50,20 @@ a {
 	text-align: center;
 }
 
+note {
+	width: 100%;
+	justify-content: space-around;
+}
+
+article {
+	width: 100%;
+}
+
 .t-row {
+	text-align: left;
+	margin: 0 !important;
+	height: 35px !important;
+	text-align: left !important;
 	font-size: 1.2rem !important;
 }
 

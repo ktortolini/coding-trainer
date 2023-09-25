@@ -708,11 +708,17 @@ const input = {
 				input.deleteTimer();
 				// sets the perMinute variable
 				input.duration = time;
-				input.perMinute = Math.round(
-					(input.correct / 5) * (input.duration / (1000 / 60)),
-				);
+				input.perMinute =
+					Math.round(input.correct / 5 / input.duration) * 60;
+				// words divided by seconds, multiply by 60 seconds
+				// new Date().getTime gives a time format called EPOCH time,
+				// subtract the two numbers to get the DELTA, or difference
+				// input.perMinute = Math.round(
+				// 	(input.correct / 5) * (input.duration / (1000 / 60)),
+				// );
+				console.log(`correct $= ${input.correct}`);
 				console.log(
-					`${input.duration} = now() - since() && ${input.perMinute}`,
+					`${input.duration} $= now() - since() && ${input.perMinute}`,
 				);
 				// clears the running timer
 				window.clearTimeout(input.id);
