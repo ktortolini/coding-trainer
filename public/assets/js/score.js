@@ -14,15 +14,18 @@ const score = {
 	getScore: function () {
 		return {
 			perMinute: function () {
+				// this is for debugging purposes
+				console.log(`score.getScore().perMinute()`);
 				let elementContent = document.getElementById('score').textContent;
-				let regularExpression = new RegExp('[^0-9]*(?<wpm>[0-9]+).*', 'gs');
+				let regularExpression = new RegExp('[^0-9]*([0-9]+).*', 's');
 				// this is for debugging purposes
 				console.log(`(${elementContent}).textContent()`);
 				// finds a match in the string
 				if (elementContent.match(regularExpression)) {
-					let wpm = parseInt(
-						elementContent.match(regularExpression).groups?.wpm,
-					);
+					let wpmMatch = elementContent.match(regularExpression);
+					let wpm = elementContent.match(regularExpression)
+						? wpmMatch[1]
+						: 0;
 					// this is for debugging purposes
 					console.log(`parseInt(elementContent.match()...?.${wpm})`);
 					return wpm;
@@ -34,18 +37,21 @@ const score = {
 				}
 			},
 			totalCorrect: function () {
+				// this is for debugging purposes
+				console.log(`score.getScore().totalCorrect()`);
 				let elementContent = document.getElementById('score').textContent;
 				let regularExpression = new RegExp(
-					'[^0-9]*[|][^0-9]*(?<correct>[0-9]+)',
-					'gs',
+					'[^0-9]*[|][^0-9]*([0-9]+)',
+					's',
 				);
 				// this is for debugging purposes
 				console.log(`(${elementContent}).textContent()`);
 				// finds a match in the string
 				if (elementContent.match(regularExpression)) {
-					let correct = parseInt(
-						elementContent.match(regularExpression).groups?.correct,
-					);
+					let correctMatch = elementContent.match(regularExpression);
+					let correct = elementContent.match(regularExpression)
+						? correctMatch[1]
+						: 0;
 					// this is for debugging purposes
 					console.log(`parseInt(elementContent.match()...?.${correct})`);
 					return correct;
@@ -57,21 +63,19 @@ const score = {
 				}
 			},
 			totalScore: function () {
+				// this is for debugging purposes
+				console.log(`score.getScore().totalScore()`);
 				return {
 					wpm: score.getScore().perMinute(),
 					correct: score.getScore().totalCorrect(),
 					user_name: () => {
+						let userName = '';
 						document.cookie.split(';').forEach((param) => {
 							if (param.trim().startsWith('user_name')) {
-								// this is for debugging purposes
-								console.log(
-									`document.cookie.split(';').forEach((param) => {...})`,
-									param,
-								);
-								// returns the value
-								return param.split('=')[1];
+								userName = param.split('=')[1];
 							}
 						});
+						return userName;
 					},
 				};
 			},
