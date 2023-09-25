@@ -25,5 +25,37 @@ const signup = async (event) => {
 	}
 };
 
+const showScores = async () => {
+	const response = await fetch('/api/scores');
+	const data = await response.json();
+	// adds regular expressions to extract from data
+	let perMinute = new RegExp('[^0-9]*([0-9]+).*', 's');
+	let totalCorrect = new RegExp('[^0-9]*[|][^0-9]*([0-9]+)', 's');
+	// compares the regular expression to the data
+	if (data.user_name) {
+		let name = JSON.stringify(data.user_name);
+		document.querySelector('#username').textContent = name;
+	} else {
+		document.querySelector('#username').textContent = `???`;
+	}
+	if (JSON.stringify(data).match(perMinute)) {
+		let wpm = JSON.stringify(data).match(perMinute);
+		document.querySelector('#wpm').textContent = wpm[1];
+	} else {
+		document.querySelector('#wpm').textContent = `???`;
+	}
+	if (JSON.stringify(data).match(totalCorrect)) {
+		let correct = JSON.stringify(data).match(totalCorrect);
+		document.querySelector('#correct').textContent = correct[1];
+	} else {
+		document.querySelector('#correct').textContent = `???`;
+	}
+};
+
 const signupForm = document.querySelector('.signup-form');
 signupForm.addEventListener('submit', signup);
+
+window.addEventListener('load', () => {
+	// shows the high scores
+	showScores();
+});
