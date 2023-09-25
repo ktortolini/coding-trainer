@@ -17,8 +17,12 @@ const signup = async (event) => {
 			document.cookie = `user_name=${name};path=/`;
 			document.location.replace('/trainer');
 		} else {
+			// this is for debugging purposes
 			const errorData = await response.json();
 			console.error(errorData.error);
+			// this is for user feedback
+			window.alert(errorData.error);
+			document.location.reload();
 		}
 	} else {
 		console.error(`if (${name}) {...}`, name);

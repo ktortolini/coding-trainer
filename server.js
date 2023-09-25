@@ -51,18 +51,25 @@ app.get('/trainer', function (req, res) {
 
 // post route for user
 app.post('/user', async function (req, res) {
-	const userData = await User.create({
-		name: req.body.name,
-	});
-	// sets the variables for the session
-	req.session.save(() => {
-		req.session.user_name = userData.name;
-		req.session.logged_in = true;
-	});
-	// this is for debugging purposes
-	console.log(`req.session = ${JSON.stringify(req.session)}`);
-	// returns the userData
-	res.status(200).json(userData);
+	try {
+		const userData = await User.create({
+			name: req.body.name,
+		});
+		// sets the variables for the session
+		req.session.save(() => {
+			req.session.user_name = userData.name;
+			req.session.logged_in = true;
+		});
+		// this is for debugging purposes
+		console.log(`req.session = ${JSON.stringify(req.session)}`);
+		// returns the userData
+		res.status(200).json(userData);
+	} catch (err) {
+		// this is for debugging purposes
+		console.log(`catch (${err.stack})`);
+		// reloads the page
+		res.redirect('/');
+	}
 });
 
 // get routes for api code and scores
