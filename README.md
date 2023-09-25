@@ -6,7 +6,6 @@
 ![GitHub](https://img.shields.io/github/license/ktortolini/random-cards?style=flat-square)
 ![GitHub language count](https://img.shields.io/github/languages/count/ktortolini/random-cards?style=flat-square)
 ![GitHub top language](https://img.shields.io/github/languages/top/ktortolini/random-cards?color=green&style=flat-square)
-[![GitHub page](https://img.shields.io/badge/GitHub%20Page-ktortolini.github.io/coding--trainer-blue.svg?style=flat-square)](https://ktortolini.github.io/coding-trainer/)
 
 # Coding Trainer
 
@@ -91,7 +90,7 @@ The root directory of the web application will show the high-scores and display 
 
 ## _Heroku Deployment_
 
-This web application has been deployed on [Heroku]().
+This web application has been deployed on [Heroku](https://my-coding-trainer-project-cbcb611cb5b8.herokuapp.com/).
 ## _Credits_
 
 The ITCH, JS, NODE and HEROKU readme file icons on the top were made by [Ileriayo](https://github.com/Ileriayo) with a link provided below: https://github.com/Ileriayo/markdown-badges#badges. 
