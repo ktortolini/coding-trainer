@@ -59,11 +59,60 @@ article {
 	width: 100%;
 }
 
+.grid {
+	grid-template-rows: repeat(1, 1fr) !important;
+	grid-template-columns: repeat(3, 1fr) !important;
+}
+
+.grid-item-name-1 {
+	grid-row: 1;
+	grid-column: 1;
+}
+
+.grid-item-num-1 {
+	grid-row: 1;
+	grid-column: 2;
+}
+
+.grid-item-score-1 {
+	grid-row: 1;
+	grid-column: 3;
+}
+
+.grid-item-name-2 {
+	grid-row: 2;
+	grid-column: 1;
+}
+
+.grid-item-num-2 {
+	grid-row: 2;
+	grid-column: 2;
+}
+
+.grid-item-score-2 {
+	grid-row: 2;
+	grid-column: 3;
+}
+
+.grid-item-name-3 {
+	grid-row: 3;
+	grid-column: 1;
+}
+
+.grid-item-num-3 {
+	grid-row: 3;
+	grid-column: 2;
+}
+
+.grid-item-score-3 {
+	grid-row: 3;
+	grid-column: 3;
+}
+
 .t-row {
-	text-align: left;
 	margin: 0 !important;
 	height: 35px !important;
-	text-align: left !important;
+	text-align: center !important;
 	font-size: 1.2rem !important;
 }
 
@@ -71,6 +120,18 @@ article {
 	/* changes the border sizing */
 	border-width: 14px !important;
 	border-image-slice: 5 !important;
+}
+
+.gold {
+	background-color: hsla(50.6, 100%, 50%, 0.35) !important;
+}
+
+.silver {
+	background-color: hsla(0, 0%, 75.3%, 0.35) !important;
+}
+
+.bronze {
+	background-color: hsla(0, 59.4%, 40.6%, 0.35) !important;
 }
 
 /* todo: add to bitkit */
