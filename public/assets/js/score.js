@@ -68,15 +68,7 @@ const score = {
 				return {
 					wpm: score.getScore().perMinute(),
 					correct: score.getScore().totalCorrect(),
-					user_name: () => {
-						let userName = '';
-						document.cookie.split(';').forEach((param) => {
-							if (param.trim().startsWith('user_name')) {
-								userName = param.split('=')[1];
-							}
-						});
-						return userName;
-					},
+					user_name: document.cookie.split('=')[1],
 				};
 			},
 		};

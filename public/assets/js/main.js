@@ -734,7 +734,7 @@ const input = {
 				let scoreValues = score.getScore().totalScore();
 				// this is for debugging purposes
 				console.log(
-					`score.setScore(${scoreValues.wpm}, ${scoreValues.correct})`,
+					`score.setScore(${scoreValues.wpm}, ${scoreValues.correct}, ${scoreValues.user_name})`,
 				);
 				// starts new snippet & timer
 				initSnippet();

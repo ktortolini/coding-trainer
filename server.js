@@ -81,7 +81,7 @@ app.post('/api/scores', function (req, res) {
 	const score = {
 		wpm: req.body.wpm,
 		correct: req.body.correct,
-		user_name: req.session.user_name,
+		user_name: req.body.user_name,
 	};
 	try {
 		// reads and parses the database file

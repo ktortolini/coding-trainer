@@ -1,4 +1,13 @@
 [
+	{ "wpm": "12", "correct": "45" },
+	{ "wpm": "10", "correct": "89" },
+	{ "wpm": "10", "correct": "46", "user_name": "FirstPlace" },
+	{ "wpm": "9", "correct": "130", "user_name": "FirstPlace" },
+	{ "wpm": "8", "correct": "84", "user_name": "FirstPlace" },
+	{ "wpm": "7", "correct": "53" },
+	{ "wpm": "7", "correct": "130" },
+	{ "wpm": "7", "correct": "38" },
+	{ "wpm": "3", "correct": "44" },
 	{ "wpm": null, "correct": null },
 	{ "wpm": null, "correct": null },
 	{ "wpm": null, "correct": null },
@@ -8,5 +17,7 @@
 	{},
 	{ "wpm": null, "correct": null },
 	{ "correct": " | Incorrect 8" },
-	{ "wpm": "5", "correct": "29" }
+	{ "wpm": "5", "correct": "29" },
+	{ "wpm": "1", "correct": "15" },
+	{ "wpm": "1", "correct": "15" }
 ]
