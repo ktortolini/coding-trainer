@@ -14,33 +14,29 @@
 		<script defer src="./assets/js/score.js"></script>
 	</head>
 	<body class="bdy-container">
-		<br />
 		<header>
 			<!-- todo: header goes here -->
+			<h3 style="text-align: center">High-Scores</h3>
 		</header>
 		<main>
-			<section class="grphc-container flex">
-				<article class="t-row block"
-					><note class="inline-flex"
-						><p class="t-row" id="username1"></p> |
-						<p class="t-row" id="wpm1"></p> |
-						<p class="t-row" id="correct1"></p></note
+			<section class="grphc-container block">
+				<article class="t-row gold"
+					><note class="grid"
+						><p class="t-row grid-item-name-1" id="username1"></p>
+						<p class="t-row grid-item-num-1" id="wpm1"></p>
+						<p class="t-row grid-item-score-1" id="correct1"></p></note
 				></article>
-			</section>
-			<section class="grphc-container flex">
-				<article class="t-row block"
-					><note class="inline-flex"
-						><p class="t-row" id="username2"></p> |
-						<p class="t-row" id="wpm2"></p> |
-						<p class="t-row" id="correct2"></p></note
+				<article class="t-row silver"
+					><note class="grid"
+						><p class="t-row grid-item-name-2" id="username2"></p>
+						<p class="t-row grid-item-num-2" id="wpm2"></p>
+						<p class="t-row grid-item-score-2" id="correct2"></p></note
 				></article>
-			</section>
-			<section class="grphc-container flex">
-				<article class="t-row block"
-					><note class="inline-flex"
-						><p class="t-row" id="username3"></p> |
-						<p class="t-row" id="wpm3"></p> |
-						<p class="t-row" id="correct3"></p></note
+				<article class="t-row bronze"
+					><note class="grid"
+						><p class="t-row grid-item-name-3" id="username3"></p>
+						<p class="t-row grid-item-num-3" id="wpm3"></p>
+						<p class="t-row grid-item-score-3" id="correct3"></p></note
 				></article>
 			</section>
 		</main>
@@ -51,10 +47,15 @@
 					<label id="username-label" for="username-row">Name:</label>
 					<span class="in-row"><input id="username-row" /></span>
 				</div>
-				<button class="i-row" type="submit">Play</button>
+				<button class="i-row" type="submit">Start</button>
 				<br />
 			</form>
 		</section>
-		<footer></footer>
+		<footer>
+			<!-- link for github repository -->
+			<a href="https://github.com/ktortolini/coding-trainer">
+				https://github.com/ktortolini/coding-trainer
+			</a>
+		</footer>
 	</body>
 </html>
