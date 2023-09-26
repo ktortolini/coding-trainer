@@ -1,1 +1,4 @@
-[{ "wpm": "103", "correct": "45", "user_name": "Sample" }]
+[
+	{ "wpm": "375", "correct": "90", "user_name": "Luke" },
+	{ "wpm": "238", "correct": "390", "user_name": "Foo Lala" }
+]
