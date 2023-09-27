@@ -64,6 +64,11 @@ article {
 	grid-template-columns: repeat(3, 1fr) !important;
 }
 
+.grid-item-position-1 {
+	grid-row: 1;
+	grid-column: 1;
+}
+
 .grid-item-name-1 {
 	grid-row: 1;
 	grid-column: 1;
@@ -116,6 +121,13 @@ article {
 	font-size: 1.2rem !important;
 }
 
+.tt-row {
+	margin: 0 !important;
+	height: 35px !important;
+	text-align: left !important;
+	font-size: 1.2rem !important;
+}
+
 .i-row {
 	/* changes the border sizing */
 	border-width: 14px !important;
@@ -131,7 +143,15 @@ article {
 }
 
 .bronze {
-	background-color: hsla(0, 59.4%, 40.6%, 0.35) !important;
+	background-color: hsla(33, 44%, 41%, 0.35) !important;
+}
+
+.green1 {
+	background-color: hsla(76, 80%, 50%, 0.15) !important;
+}
+
+.green2 {
+	background-color: hsla(76, 82%, 39%, 0.15) !important;
 }
 
 /* todo: add to bitkit */
@@ -153,4 +173,13 @@ article {
 	/* setting up the columns and the rows */
 	grid-template-rows: repeat(5, 16px); /* 5 rows, height of 16px */
 	grid-template-columns: repeat(30, 8px); /* 30 columns, width of 8px */
+}
+
+.score-scroll {
+	max-height: 105px;
+	overflow-y: scroll;
+	scrollbar-width: thin;
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+	scrollbar-color: var(--default-text-color) transparent;
 }
