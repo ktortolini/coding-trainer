@@ -115,10 +115,19 @@ app.post('/api/scores', function (req, res) {
 	});
 	// prunes the scores to maintain 10 entries
 	if (data.length > 10) {
+		// removes the last score
 		data.pop();
 	}
-	// writes the data to the database
+	// writes the data to the json file
 	fs.writeFileSync('./db/json/scores.json', JSON.stringify(data));
+	// inserts the data into table
+	Score.create(score)
+		.then(() => {
+			console.log('Data inserted successfully');
+		})
+		.catch((error) => {
+			console.error('Error inserting data:', error);
+		});
 	res.json(data);
 });
 
