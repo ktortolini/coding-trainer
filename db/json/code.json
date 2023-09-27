@@ -98,5 +98,55 @@
 		"category": "Declarations",
 		"id": "umilz3a09ohbjvex",
 		"code": "const regex = new RegExp('([0-9]{5})', 'gm');"
+	},
+	{
+		"category": "Loops",
+		"id": "6bb7654dgd3fgh28",
+		"code": "while (i <= 10) console.log(i), i++;"
+	},
+	{
+		"category": "Loops",
+		"id": "8d1vmht2ereo8ba2",
+		"code": "for (const value of array) console.log(number);"
+	},
+	{
+		"category": "Loops",
+		"id": "865ad1h13h1tfe23",
+		"code": "for (let i = 0; i < 10; i++) console.log(i);"
+	},
+	{
+		"category": "Loops",
+		"id": "r2v37id1v667zezr",
+		"code": "a.forEach(item => console.log(item));"
+	},
+	{
+		"category": "Loops",
+		"id": "tjgpnqv1wphlv1y2",
+		"code": "a.forEach((a, b, c) => console.log(a, b, c));"
+	},
+	{
+		"category": "Loops",
+		"id": "756fgh434a67z241",
+		"code": "while(n > 0) console.log(n >>= 1);"
+	},
+	{
+		"category": "Loops",
+		"id": "1g7cbtlxjrsqdibu",
+		"code": "while(a.length) console.log(a.shift());"
+	},
+	{
+		"category": "Loops",
+		"id": "fg345d4jkl6gg341",
+		"code": "while (l <= h) { let m = ((l + h) / 2) >> 0; }"
+	},
+	{
+		"category": "Loops",
+		"id": "c12q0hrasfsu6amx",
+		"code": "a.forEach((s, e) => console.log(calc(s+e)));"
+	},
+	{
+		"category": "Loops",
+		"id": "q4q5i7b1f4w1c1tq",
+		"code": "a.forEach(i => console.log(i >>= 1, i));"
 	}
 ]
