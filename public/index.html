@@ -13,31 +13,20 @@
 		<script async src="./assets/js/index.js"></script>
 		<script defer src="./assets/js/score.js"></script>
 	</head>
+
 	<body class="bdy-container">
 		<header>
 			<!-- todo: header goes here -->
 			<h3 style="text-align: center">High-Scores</h3>
 		</header>
 		<main>
-			<section class="grphc-container block">
-				<article class="t-row gold"
-					><note class="grid"
-						><p class="t-row grid-item-name-1" id="username1"></p>
-						<p class="t-row grid-item-num-1" id="cpm1"></p>
-						<p class="t-row grid-item-score-1" id="correct1"></p></note
-				></article>
-				<article class="t-row silver"
-					><note class="grid"
-						><p class="t-row grid-item-name-2" id="username2"></p>
-						<p class="t-row grid-item-num-2" id="cpm2"></p>
-						<p class="t-row grid-item-score-2" id="correct2"></p></note
-				></article>
-				<article class="t-row bronze"
-					><note class="grid"
-						><p class="t-row grid-item-name-3" id="username3"></p>
-						<p class="t-row grid-item-num-3" id="cpm3"></p>
-						<p class="t-row grid-item-score-3" id="correct3"></p></note
-				></article>
+			<note class="grid">
+				<p class="t-row grid-item-name-0">Name</p>
+				<p class="t-row grid-item-num-0">CPM</p>
+				<p class="t-row grid-item-score-0">Correct</p>
+			</note>
+			<section class="grphc-container score-scroll block">
+				<!-- todo: check the dynamic code here -->
 			</section>
 		</main>
 		<br />
