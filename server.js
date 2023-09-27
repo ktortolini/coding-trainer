@@ -102,8 +102,21 @@ app.post('/api/scores', function (req, res) {
 	console.log(`const score = ${JSON.stringify(req.body)}`);
 	// pushes to array
 	data.push(score);
-	// sorts the array in descending order
-	data.sort((value1, value2) => value2.wpm - value1.wpm);
+	// sorts the array with a ratio of wpm and correct
+	data.sort((value1, value2) => {
+		// assigns a weighted value for correct
+		let weightValue1 = value1.correct * 0.25;
+		let weightValue2 = value2.correct * 0.25;
+		// adds the correct values to the cpm value
+		let totalScore1 = value1.wpm + weightValue1;
+		let totalScore2 = value2.wpm + weightValue2;
+		// returns a value for sorting purposes
+		return totalScore2 - totalScore1;
+	});
+	// prunes the scores to maintain 10 entries
+	if (data.length > 10) {
+		data.pop();
+	}
 	// writes the data to the database
 	fs.writeFileSync('./db/json/scores.json', JSON.stringify(data));
 	res.json(data);
