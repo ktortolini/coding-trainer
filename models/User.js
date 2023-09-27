@@ -13,7 +13,7 @@ User.init(
 		name: {
 			type: DataTypes.STRING,
 			allowNull: true,
-			primaryKey: true,
+			primaryKey: false,
 			validate: {
 				isCivil(value) {
 					if (alphaCheck.isProfane(value)) {
