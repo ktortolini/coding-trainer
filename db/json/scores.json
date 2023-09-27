@@ -1,4 +1,1 @@
-[
-	{ "wpm": "375", "correct": "90", "user_name": "Luke" },
-	{ "wpm": "238", "correct": "390", "user_name": "Foo Lala" }
-]
+[{"wpm":"375","correct":"90","user_name":"Luke"},{"wpm":"257","correct":"15","user_name":"Daniel"},{"wpm":"238","correct":"390","user_name":"Foo Lala"},{"wpm":"160","correct":"55","user_name":"Daniel"}]
