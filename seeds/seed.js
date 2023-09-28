@@ -37,7 +37,8 @@ const readDatabase = async () => {
 		// returns a value for sorting purposes
 		return totalScore2 - totalScore1;
 	});
-	if (scores.length > 10) {
+	// pops out entries past 10
+	while (scores.length > 10) {
 		scores.pop();
 	}
 	fs.writeFile(
