@@ -1,0 +1,3 @@
+# this is a sample robots txt file
+User-agent: *
+Disallow: /
