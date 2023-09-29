@@ -55,6 +55,11 @@ note {
 	justify-content: space-around;
 }
 
+label {
+	cursor: inherit !important;
+	user-select: none !important;
+}
+
 article {
 	width: 100%;
 }
@@ -127,16 +132,17 @@ article {
 
 /* todo: add to bitkit */
 .score-scroll {
+	cursor: none;
 	max-height: 105px;
 	overflow-y: scroll;
 	scrollbar-width: thin;
 	scroll-behavior: smooth;
-	scroll-snap-type: y mandatory;
+	scroll-snap-stop: revert-layer;
+	scrollbar-arrow-color: var(--black-color);
 	scrollbar-color: var(--default-text-color) transparent;
 }
 
 /* the following are grid-item classes */
-
 .grid-item-position-1 {
 	grid-row: 1;
 	grid-column: 1;
