@@ -17,7 +17,7 @@ const score = {
 				// this is for debugging purposes
 				console.log(`score.getScore().perMinute()`);
 				let elementContent = document.getElementById('score').textContent;
-				let regularExpression = new RegExp('[^0-9]*([0-9]+).*', 's');
+				let regularExpression = new RegExp('[^0-9]*([0-9]+)', 's');
 				// this is for debugging purposes
 				console.log(`(${elementContent}).textContent()`);
 				// finds a match in the string
